@@ -1,0 +1,29 @@
+header {
+    diplay: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span{
+    font-size: 1.2rem;
+    color:aquamarine;
+}
+.hamburger{
+    background: none;
+    border: none;
+    color: #cc2c;
+    cursor: pointer;
+}
+.hamburger::after{
+    content: "\2630";
+    font-size:  2rem;
+}
