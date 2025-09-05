@@ -1,0 +1,6 @@
+.navigation {
+    display: block;
+}
+ul {
+    display: flex;
+}

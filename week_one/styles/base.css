@@ -27,3 +27,10 @@ header span{
     content: "\2630";
     font-size:  2rem;
 }
+navigation{
+    display: none;
+}
+
+navigation.show{
+    display: block;
+}
