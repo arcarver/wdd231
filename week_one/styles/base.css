@@ -34,3 +34,54 @@ navigation{
 navigation.show{
     display: block;
 }
+navigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+    ;
+}
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: blue;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+
+}
+.navidation li.current {
+    background-color: #fff;
+}
+ .navigation a::hover{
+    background-color: #aaa;
+ }
+ h1{
+    margin-left 10px;
+    
+ }
+ footer{
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+ }
+ .social {
+display: flex;
+justify-content: center;
+column-gap: 8px;
+ }
+ .social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+ }
+ .social img{
+    width: 22px;
+    height: 22px;
+
+ }
+ .social a:hover{
+    background-color: #ddd;
+ }
