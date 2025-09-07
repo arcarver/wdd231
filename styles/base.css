@@ -1,8 +1,117 @@
 :root {
-    --accent-color:#f1f7edff;
+    --background-color:#f1f7edff;
     --font-color: #243e36ff;
     --primary-color: #7ca982ff;
-    --highlight-color: #e0eec6ff;
+    --accent-color: #e0eec6ff;
     --secondary-color: #c2a83eff;
 
+    --primary-font: montserrat-fancy, Arial,
+            sans-serif;
+    --secondary-font: "Edu QLD Beginner",
+            Geneva, serif;
+
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+
+}
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px var(--primary-color);
+    column-gap: 8px;
+    font-family: var(--secondary-font);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--font-color);
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.navigation {
+    display: none;
+    
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: solid 1px var(--secondary-color)
+
+}
+
+.navidation li.current {
+    background-color: var(--secondary-color);
+}
+
+.navigation a:hover {
+    background-color: var(--accent-color);
+}
+
+h1 {
+    margin-left: 10px;
+
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--secondary-color) solid 1px;
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+
+}
+
+.social a:hover {
+    background-color: var(--accent-color);
 }
