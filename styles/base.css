@@ -113,7 +113,8 @@ h1 {
     text-decoration: none;
 }
 .courseDone {
-    color: var(--accent-color);
+    color: var(--font-color);
+    background-color: var(--background-color);
 }
 .courseTodo {
     color: var(--background-color);
@@ -123,6 +124,14 @@ footer {
     background-color: var(--primary-color);
     padding: 1rem 10px;
     text-align: center;
+}
+
+#courseFilters a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+#courseFilters a:hover {
+    background-color: var(--accent-color);
 }
 
 .social {

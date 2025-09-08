@@ -1,3 +1,8 @@
 @media screen and (min-width: 550px){
-    
+    .hidden {
+        display: unset;
+    }
+    #ham-btn {
+        display: none;
+    }
 }
