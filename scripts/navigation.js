@@ -1,5 +1,7 @@
-const navBar = document.querySelector('#nav-bar');
-navButton.addEventListener('click', () => {
-    navButton.classList.toggle('show');
-    navBar.classList.toggle('show');
+const hamButton = document.querySelector("#ham-btn");
+const navigation = document.querySelector("#nav-bar");
+
+hamButton.addEventListener("click", () => {
+    navigation.classList.toggle("hidden");
+    hamButton.classList.toggle("show");
 });

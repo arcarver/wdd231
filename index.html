@@ -17,6 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Edu+QLD+Beginner:wght@600&family=Montserrat&display=swap"
         rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course-buttons.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,9 +27,9 @@
         <button id="ham-btn" class="hamburger"></button>
     </header>
 
-    <nav id="nav-bar" class="navigation">
+    <nav id="nav-bar" class="hidden">
         <ul>
-            <li class="current"><a hre="#">Home</a></li>
+            <li class="current"><a href="#">Home</a></li>
             <li><a href="#">Chamber Project</a></li>
             <li><a href="#">Final Project</a></li>
         </ul>
@@ -35,7 +37,7 @@
     <main>
     
         <h1>Home</h1>
-        <section>
+        <section class="about">
             <h2>About Me</h2>
             <p>My name is Annie Carver.  I live in Kirkland Washington with my family and our dog. I love to play in the water, read, ski, country dance and rock climb.</p>
         </section>
@@ -44,7 +46,7 @@
             <img src="images/annie-tall.webp" alt="picture of me" width="300px" height="auto">
         </section>
         
-        <section>
+        <section class="classes">
             <h2>Web Certificate Courses</h2>
             <nav>
                 <ul>

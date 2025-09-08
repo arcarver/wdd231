@@ -1,3 +1,20 @@
+// const year = document.querySelector("#year");
+// const today = new Date();
+
+// year.innerHTML = `${today.getFullYear()}`;
+
+// const lastMod = document.querySelector("#last");
+// lastMod.innerHTML = `${document.lastModified}`;
+
+// const hamButton = document.querySelector("ham-btn");
+// const navigation = document.querySelector("nav-bar");
+
+// hamButton.addEventListener("click", () => {
+//     navigation.classList.toggle("hidden");
+//     hamButton.classList.toggle("show");
+// });
+
+
 const courses = [
     {
         subject: 'CSE',
