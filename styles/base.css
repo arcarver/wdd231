@@ -70,13 +70,20 @@ header span {
     padding: 0;
 }
 
+.aboutAndPhoto section {
+    padding: .8rem 10px
+}
+
+.classes {
+    padding: .8rem 10px
+}
+
 #nav-bar a {
     display: block;
     padding: .8rem 10px;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     border-bottom: solid 1px var(--secondary-color);
-
 }
 .hidden {
     display: none;
