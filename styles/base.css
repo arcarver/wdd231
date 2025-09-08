@@ -78,9 +78,6 @@ header span {
     border-bottom: solid 1px var(--secondary-color);
 
 }
-a{
-    text-decoration: none;   
-}
 .hidden {
     display: none;
 }
@@ -111,6 +108,15 @@ h1 {
 .classes{
     background-color: var(--font-color);
     color: var(--secondary-color);
+}
+#courses a {
+    text-decoration: none;
+}
+.courseDone {
+    color: var(--accent-color);
+}
+.courseTodo {
+    color: var(--background-color);
 }
 
 footer {

@@ -94,3 +94,24 @@ const courses = [
         completed: false
     }
 ]
+
+const coursesList = document.querySelector("#courses");
+
+function makeCards(value) {
+    const liInfo = document.createElement("li");
+    const aLink = document.createElement("a");
+    aLink.href = '#';
+    if (value.completed) {
+        aLink.className = 'courseDone';
+    } else {
+        aLink.className = 'courseTodo';
+    }
+
+    liInfo.id = 'card';
+    liInfo.appendChild(aLink);
+
+    aLink.textContent = value.title;
+    coursesList.appendChild(liInfo);
+};
+
+courses.map(makeCards);
