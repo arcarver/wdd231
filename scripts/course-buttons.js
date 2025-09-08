@@ -114,12 +114,23 @@ function makeCards(value) {
     coursesList.appendChild(liInfo);
 };
 
+function makeTotalCredits(newCourses) {
+    const totalCreditsElement = document.querySelector("#totalCredits");
+    let creditCount = 0;
+    for (const newCourse of newCourses) {
+        creditCount += newCourse.credits;
+    }
+    totalCreditsElement.textContent = 'The total credits for courses above is ' + creditCount;
+} 
+
 courses.map(makeCards);
+makeTotalCredits(courses);
 
 const allLink = document.querySelector("#allFilter");
 allLink.addEventListener("click", () => {
     document.querySelector("#courses").innerHTML = "";
     courses.map(makeCards);
+    makeTotalCredits(courses);
 })
 
 
@@ -130,6 +141,7 @@ newLink.addEventListener("click", () => {
         return value.subject === 'WDD';
     });
     newCourses.map(makeCards);
+    makeTotalCredits(newCourses);
 })
 
 const cseLink = document.querySelector("#cseFilter");
@@ -139,4 +151,5 @@ cseLink.addEventListener("click", () => {
         return value.subject === 'CSE';
     });
     newCourses.map(makeCards);
+    makeTotalCredits(newCourses);
 })
