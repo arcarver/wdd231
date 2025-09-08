@@ -61,6 +61,7 @@ header span {
 
 .navigation.active {
     display: block;
+    background-color: var(--secondary-color);
 }
 
 .navigation ul {
@@ -69,13 +70,16 @@ header span {
     padding: 0;
 }
 
-.navigation a {
+#nav-bar a {
     display: block;
     padding: .8rem 10px;
     color: var(--primary-color);
     text-decoration: none;
     border-bottom: solid 1px var(--secondary-color);
 
+}
+a{
+    text-decoration: none;   
 }
 .hidden {
     display: none;
