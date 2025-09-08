@@ -116,11 +116,27 @@ function makeCards(value) {
 
 courses.map(makeCards);
 
+const allLink = document.querySelector("#allFilter");
+allLink.addEventListener("click", () => {
+    document.querySelector("#courses").innerHTML = "";
+    courses.map(makeCards);
+})
+
+
 const newLink = document.querySelector("#wddFilter");
 newLink.addEventListener("click", () => {
     document.querySelector("#courses").innerHTML = "";
     const newCourses = courses.filter((value) => {
         return value.subject === 'WDD';
+    });
+    newCourses.map(makeCards);
+})
+
+const cseLink = document.querySelector("#cseFilter");
+cseLink.addEventListener("click", () => {
+    document.querySelector("#courses").innerHTML = "";
+    const newCourses = courses.filter((value) => {
+        return value.subject === 'CSE';
     });
     newCourses.map(makeCards);
 })
