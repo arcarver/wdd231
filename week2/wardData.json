@@ -1,0 +1,23 @@
+{
+    "lastName": "Carver",
+    "moveInDate": "Aug 31, 2007",
+    "familySize": 3,
+    "visted": true,
+    "individualData": [
+        {
+            "firstName": "Suzie",
+            "gender": "female",
+            "birthdate": "Jan 3, 1986"
+        },
+        {
+            "firstName": "George",
+            "gender": "male",
+            "birthdate": "Jan 3, 1986" 
+        },
+        {
+            "firstName": "Philpina",
+            "gender": "female",
+            "birthdate": "Jan 3, 1986"
+        }
+    ]
+}
