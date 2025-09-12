@@ -13,5 +13,61 @@
     background-color: var(--background-color);
     font-family: var(--primary-font);
     padding: 5px 0 5px 10px;
+    color: var(--font-color);
 
 }
+h1{
+    display: flex;
+    justify-content: center;
+}
+#cards{
+    
+    padding: 5px;
+    margin: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 394px;
+}
+
+#cards img {
+    width:100%;
+    height:auto;
+    max-width: 340px;
+}
+section{
+    border: 2px solid var(--secondary-color);
+    padding: 25px;
+    margin: 10px;
+    bottom: 0;
+    
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    white-space: nowrap;
+}
+@media screen and (min-width: 600px){
+    #cards {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            max-width: 100%;
+    
+        }
+}
+@media screen and (min-width: 870px){
+    #cards {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            max-width: 100%;
+    
+        }
+}
+@media screen and (min-width: 998px) {
+    #cards {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            max-width: 100%;
+
+        }
+    }
