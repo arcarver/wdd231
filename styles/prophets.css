@@ -41,7 +41,7 @@ section{
     bottom: 0;
     
 }
-h2{
+h2, h3{
     display: flex;
     justify-content: center;
     font-family: var(--secondary-font);
