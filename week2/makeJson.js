@@ -1,8 +1,8 @@
-conts wardObject1 = {
+const wardObject1 = {
     familyName: "Carver",
     moveInDate: "Aug 31, 2007",
     familySize: 7,
-    visited: true;
+    visited: true,
     individualData: {
         firstName: "Annie",
         gender: "female",
