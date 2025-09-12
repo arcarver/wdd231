@@ -9,20 +9,20 @@ async function getProphetData() {
 }
 
 const displayProphets = (prophets) => {
-    prophets.forEach((prophets) => {
+    prophets.forEach((prophet) => {
         let card = document.createElement('section');
         let fullname = document.createElement('h2');
         let portrait = document.createElement('img');
 
-        fullname.textContent = `${prophet.getProphetData} `;
+        fullname.textContent = `${prophet.name} ${prophet.lastname}`;
 
-        portrait.setAttribute(src, prophets.imgeurl);
-        portrait.setAttribute('alt', `Portrait of ${prophet.name} `);
+        portrait.setAttribute(src, prophet.imgeurl);
+        portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
         portrait.setAttribute('loading', 'lazy');
         portrait.setAttribute('width', '340');
         portrait.setAttribute('height', '440');
 
-        card.appendChild(heading);
+        card.appendChild(fullname);
         card.appendChild(portrait);
 
         cards.appendChild(card);
