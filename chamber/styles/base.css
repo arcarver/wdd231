@@ -19,6 +19,9 @@ header{
     background-color: var(--secondary-color);
     
 }
+span{
+    
+}
 .hamburger {
     background: none;
     border: none;
