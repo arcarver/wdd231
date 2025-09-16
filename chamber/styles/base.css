@@ -45,3 +45,29 @@ span {}
     content: "\00D7";
     color: var(--font-color);
 }
+@media screen and (min-width: 600px) {
+    #cards {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        max-width: 100%;
+
+    }
+}
+
+@media screen and (min-width: 870px) {
+    #cards {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        max-width: 100%;
+
+    }
+}
+
+@media screen and (min-width: 998px) {
+    #cards {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        max-width: 100%;
+
+    }
+}

@@ -18,7 +18,9 @@ async function setupBusinesses() {
         </section>
     */
     businesses.companies.forEach(company => {
+        // <section>
         const sectionElement = document.createElement('section');
+        cardSection.appendChild(sectionElement);
 
         // <h3>Business Name</h3>
         const nameElement = document.createElement('h3');
@@ -27,7 +29,7 @@ async function setupBusinesses() {
 
         // <h4>Business Tag line</h4>
         const tagLineElement = document.createElement('h4');
-        tagLineElement.textContent = company.tag_line;
+        tagLineElement.textContent = company.tagLine;
         sectionElement.appendChild(tagLineElement);
 
         // <aside>
@@ -39,7 +41,20 @@ async function setupBusinesses() {
         imageElement.setAttribute('src', company.image);
         asideElement.appendChild(imageElement);
 
-        cardSection.appendChild(sectionElement);
+        // <h5>EMAIL</h5>
+        const emailElement = document.createElement("h5");
+        emailElement.textContent = company.email;
+        asideElement.appendChild(emailElement);
+
+        //         <h5>PHONE</h5>
+        const phoneElement = document.createElement("h5");
+        phoneElement.textContent = company.phone;
+        asideElement.appendChild(phoneElement);
+
+        //         <h5>URL</h5>
+        const urlElement = document.createElement("h5");
+        urlElement.textContent = company.websiteUrl;
+        asideElement.appendChild(urlElement);
     });
 }
 
