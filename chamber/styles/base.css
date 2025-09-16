@@ -20,6 +20,11 @@ header {
     background-color: var(--secondary-color);
 }
 
+aside img {
+    height: 100px;
+    width: 100px;
+}
+
 span {}
 
 .hamburger {

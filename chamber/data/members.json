@@ -1,0 +1,14 @@
+{
+    "companies": [
+        {
+            "name": "ACME",
+            "tag_line": "ACME Gadgets for Coyotes",
+            "address": "123 ACME Lane",
+            "phone": "123-456-7890",
+            "website_url": "https://acme.com",
+            "image": "images/acme.webp",
+            "membership_level": "free",
+            "other_info": "Gadgets"
+        }
+    ]
+}

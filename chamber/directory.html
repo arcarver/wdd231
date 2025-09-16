@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 – Web Frontend Development I - Annie Carver</title>
     <meta name="author" content="Annie Carver">
-    <meta name="description"
-        content="Chamber of Commerce assignment in WDD 231 – Web Frontend Development I">
+    <meta name="description" content="Chamber of Commerce assignment in WDD 231 – Web Frontend Development I">
     <meta property="og:title" content="Chamber of Commerce home page">
-    <meta property="og:description"
-        content="Directory Page for Chamber of Commerce Assignment for WDD231 Class">
+    <meta property="og:description" content="Directory Page for Chamber of Commerce Assignment for WDD231 Class">
     <meta property="og:image" content="https://arcarver.github.io/wdd231/images/annie-tall.webp">
     <meta property="og:url" content="https://arcarver.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="facebook.com"
+    <meta property="og:site_name" content="facebook.com">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -27,15 +26,17 @@
         rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/businessInfo.js" defer></script>
     <!-- <script src="scripts/course-buttons.js" defer></script> -->
 </head>
+
 <body>
     <header>
         <img src="images/leaves.svg" alt="icon of leaves" width="25" height="25">
         <span>Annie Carver's Chamber of Commerce Website</span>
         <button id="ham-btn" class="hamburger"></button>
     </header>
-    
+
     <nav id="nav-bar" class="hidden">
         <ul>
             <li class="current"><a href="#">Home</a></li>
@@ -45,7 +46,7 @@
         </ul>
     </nav>
     <div>
-        <img src="" alt="hero image" width="100%" >
+        <img src="" alt="hero image" width="100%">
         <button="auto" Keynote Tickets>
     </div>
     <div>
@@ -65,65 +66,36 @@
             <p>Today, Tomorrow Next Day</p>
         </section>
     </div>
-    <div>
-        <section>
-            <h3>Business Name</h3>
-            <h4>Business Tag line</h4>
-            <aside>
-            <img src="" alt="business picture">
-            <h5>EMAIL</h5>
-            <h5>PHONE</h5>
-            <h5>URL</h5>
-            </aside>
-        </section>
-        <section>
-            <h3>Business Name</h3>
-            <h4>Business Tag line</h4>
-            <aside>
-                <img src="" alt="business picture">
-                <h5>EMAIL</h5>
-                <h5>PHONE</h5>
-                <h5>URL</h5>
-            </aside>
-        </section>
-            <section>
-                <h3>Business Name</h3>
-                <h4>Business Tag line</h4>
-                <aside>
-                    <img src="" alt="business picture">
-                    <h5>EMAIL</h5>
-                    <h5>PHONE</h5>
-                    <h5>URL</h5>
-                </aside>
-        </section>
+    <div id="businessCards">
     </div>
     <footer>
         <section>
             <h3>Business Name</h3>
             <h4>Business Tag line</h4>
-            
-                
-                <h5>EMAIL</h5>
-                <h5>PHONE</h5>
-                <h5>URL</h5>
-            
+
+
+            <h5>EMAIL</h5>
+            <h5>PHONE</h5>
+            <h5>URL</h5>
+
         </section>
         <div class="social">
-            <a href="https://github.com/arcarver" target="-blank"><img src="images/github.svg" alt="link github" width="16"
-                    height="16"></a>
+            <a href="https://github.com/arcarver" target="-blank"><img src="images/github.svg" alt="link github"
+                    width="16" height="16"></a>
             <a href="https://www.linkedin.com/in/annie-carver-501b5a35b/" target="-blank"><img src="images/linkedin.svg"
                     alt="link to linkedin" width="16" height="16"></a>
             <a href="https://signal.org/" target="-blank"><img src="images/signal.svg" alt="link to signal" width="16"
                     height="16"></a>
-            <a href="https://discord.com/" target="-blank"><img src="images/discord.svg" alt="link to discord" width="16"
-                    height="16"></a>
-    
-    
+            <a href="https://discord.com/" target="-blank"><img src="images/discord.svg" alt="link to discord"
+                    width="16" height="16"></a>
+
+
         </div>
         <section>
-        <p>©<span id="year">Loading</span>🌳 Annie Carver 🌳 Washington</p>
-        <p>Last Modified <span id="last">loading</span></p>
+            <p>©<span id="year">Loading</span>🌳 Annie Carver 🌳 Washington</p>
+            <p>Last Modified <span id="last">loading</span></p>
         </section>
     </footer>
 </body>
+
 </html>
