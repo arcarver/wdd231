@@ -129,10 +129,12 @@ aside img {
     grid-template-columns: 100%;
     background-color: var(--font-color);
     color: var(--background-color);
+    width: '100%';
     
 }
 #chamberContact h5{
     margin-left: 15px;
+    
 }
 .social{
     padding: 30px 0 30px 0;
@@ -145,16 +147,17 @@ aside img {
     display: grid;
 }
 @media screen and (min-width: 600px) {
-    #businesscards {
+    #businessCards {
         display: grid;
         grid-template-columns: 50% 50%;
         max-width: 100%;
 
     }
+    
 }
 
 @media screen and (min-width: 870px) {
-    #businesscards {
+    #businessCards {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         max-width: 100%;
@@ -163,7 +166,7 @@ aside img {
 }
 
 @media screen and (min-width: 998px) {
-    #businesscards {
+    #businessCards {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         max-width: 100%;
