@@ -12,6 +12,7 @@
 
     color: var(--font-color);
     margin-left: 15px;
+    font-family: var(--secondary-font);
 
 }
 
@@ -22,18 +23,22 @@ header {
     background-color: var(--secondary-color);
 }
 
-aside img {
-    height: 100px;
-    width: 100px;
+header img{
+    padding: 5px;
 }
 
-span {}
+span {
+    font-family: var(--primary-font);
+}
 
 .hamburger {
     background: none;
     border: none;
     color: var(--font-color);
     cursor: pointer;
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
 
 }
 
@@ -46,6 +51,77 @@ span {}
 .hamburger.show::before {
     content: "\00D7";
     color: var(--font-color);
+}
+nav{
+    background-color: var(--primary-color);
+}
+nav.hidden {
+    display: none;
+}
+
+nav.show {
+    display: block;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: .8rem 10px;
+    color: var(--font-color);
+    text-decoration: none;
+    border-bottom: solid 1px var(--accent-color);
+
+}
+
+/* nav li.current {
+    background-color: #fff;
+} */
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+section{
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    border: 2px double var(--secondary-color);
+    padding: 10px;
+    display: flex; 
+    justify-content: center;
+    max-width: 300px;
+}
+
+section h4 {
+    width: 150px;
+    padding-left: 10px;
+    /* justify-content: center; */
+}
+h3 {
+    font-family: var(--primary-font);
+    width: 200px;
+    padding-left: 10px;
+    /* justify-content: center; */
+}
+
+h5 {
+    font-family: var(--primary-font);
+   margin-top: 0px;
+   margin-bottom: 5px;
+}
+aside{
+    background-color: var(--background-color);
+    padding-left: 25px;
+}
+aside img {
+    height: auto;
+    width: 100px;
+    margin-top: 5px;
+    justify-items: left;
 }
 @media screen and (min-width: 600px) {
     #businesscards {

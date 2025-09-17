@@ -7,14 +7,16 @@ async function setupBusinesses() {
     const cardSection = document.getElementById('businessCards');
     /*
         <section>
-            <h3>Business Name</h3>
-            <h4>Business Tag line</h4>
-            <aside>
-                <img src="" alt="business picture">
-                <h5>EMAIL</h5>
-                <h5>PHONE</h5>
-                <h5>URL</h5>
-            </aside>
+            <div>
+                <h3>Business Name</h3>
+                <h4>Business Tag line</h4>
+                <aside>
+                    <img src="" alt="business picture">
+                    <h5>EMAIL</h5>
+                    <h5>PHONE</h5>
+                    <h5>URL</h5>
+                </aside>
+            </div>
         </section>
     */
     businesses.companies.forEach(company => {
@@ -22,19 +24,23 @@ async function setupBusinesses() {
         const sectionElement = document.createElement('section');
         cardSection.appendChild(sectionElement);
 
+        // <div>
+        const divElement = document.createElement('div');
+        sectionElement.appendChild(divElement);
+
         // <h3>Business Name</h3>
         const nameElement = document.createElement('h3');
         nameElement.textContent = company.name;
-        sectionElement.appendChild(nameElement);
+        divElement.appendChild(nameElement);
 
         // <h4>Business Tag line</h4>
         const tagLineElement = document.createElement('h4');
         tagLineElement.textContent = company.tagLine;
-        sectionElement.appendChild(tagLineElement);
+        divElement.appendChild(tagLineElement);
 
         // <aside>
         const asideElement = document.createElement('aside');
-        sectionElement.appendChild(asideElement);
+        divElement.appendChild(asideElement);
 
         // <img src="" alt="business picture">
         const imageElement = document.createElement('img');
