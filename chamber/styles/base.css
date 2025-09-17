@@ -98,14 +98,16 @@ section{
 }
 
 section h4 {
-    width: 150px;
+    /* width: 150px; */
     padding-left: 10px;
+    text-align: center;
     /* justify-content: center; */
 }
 h3 {
     font-family: var(--primary-font);
-    width: 200px;
+    
     padding-left: 10px;
+    text-align: center;
     /* justify-content: center; */
 }
 
@@ -127,10 +129,13 @@ aside img {
 #chamberContact{
     display: grid;
     grid-template-columns: 100%;
+    justify-items: center;
     background-color: var(--font-color);
     color: var(--background-color);
-    width: '100%';
-    
+    max-width: unset;
+}
+#chamberContact h3 {
+    text-align: center;
 }
 #chamberContact h5{
     margin-left: 15px;
@@ -145,6 +150,7 @@ aside img {
 }
 #signature{
     display: grid;
+    max-width: unset;
 }
 @media screen and (min-width: 600px) {
     #businessCards {
