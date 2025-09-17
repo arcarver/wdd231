@@ -7,7 +7,7 @@
             "phone": "123-456-7890",
             "websiteUrl": "https://acme.com",
             "email": "acme@acme.com",
-            "image": "images/acme.jpg",
+            "image": "images/acme.webp",
             "membershipLevel": "Bronze",
             "otherInfo": "Gadgets"
         },
@@ -18,7 +18,7 @@
             "phone": "890-456-1230",
             "websiteUrl": "https:/pizza.com",
             "email": "pizza@pizza.com",
-            "image": "images/pizza.jpg",
+            "image": "images/pizza.webp",
             "membershipLevel": "Gold",
             "otherInfo": "Many Toppings"
         },
@@ -29,7 +29,7 @@
             "phone": "456-789-0112",
             "websiteUrl": "https://bakery.com",
             "email": "bakery@bakery.com",
-            "image": "images/bakery.jpg",
+            "image": "images/bakery.webp",
             "membershipLevel": "Gold",
             "otherInfo": "rolls"
         },
@@ -40,7 +40,7 @@
             "phone": "876-543-2198",
             "websiteUrl": "https://petbehave.com",
             "email": "trainer@dogs.com",
-            "image": "images/dog.jpg",
+            "image": "images/dog.webp",
             "membershipLevel": "Silver",
             "otherInfo": "Leashes"
         },
@@ -51,7 +51,7 @@
             "phone": "528-639-4170",
             "websiteUrl": "https://driving.com",
             "email": "drive@car.com",
-            "image": "images/driver.jpg",
+            "image": "images/driver.webp",
             "membershipLevel": "Bronze",
             "otherInfo": "4 Door Sedans"
         },
@@ -62,7 +62,7 @@
             "phone": "321-654-9870",
             "websiteUrl": "https://play.com",
             "email": "kids@play.com",
-            "image": "images/preschool.jpg",
+            "image": "images/preschool.webp",
             "membershipLevel": "Bronze",
             "otherInfo": "Toys and Games"
         },
@@ -73,7 +73,7 @@
             "phone": "654-987-3211",
             "websiteUrl": "https://tree.com",
             "email": "tree@climb.com",
-            "image": "images/treeTrimmer.jpg",
+            "image": "images/treeTrimmer.webp",
             "membershipLevel": "Gold",
             "otherInfo": "Saws and climbing gear"
         }

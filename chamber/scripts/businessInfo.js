@@ -42,14 +42,16 @@ async function setupBusinesses() {
         const asideElement = document.createElement('aside');
         divElement.appendChild(asideElement);
 
-        // <img src="" alt="business picture">
+        // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
         imageElement.setAttribute('src', company.image);
+        imageElement.setAttribute('loading', 'lazy');
+        imageElement.setAttribute("alt", company.name);
         asideElement.appendChild(imageElement);
 
         // <h5>EMAIL</h5>
         const emailElement = document.createElement("h5");
-        emailElement.textContent = company.email;
+        emailElement.textcontent = company.email;
         asideElement.appendChild(emailElement);
 
         //         <h5>PHONE</h5>
