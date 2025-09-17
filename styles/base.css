@@ -100,16 +100,29 @@ section{
     display: flex;
     align-content: center;
     flex-direction: column;
+    justify-items: center;
 }
 h1 {
-    margin-left: 10px;
-    
-
+    display: flex;
+    justify-content: center;
 }
+h2{
+    display: flex;
+    justify-content: center;
+}
+
 .about{
     border: solid 2px var(--secondary-color);
     background-color: var(--accent-color);
     align-content: center;
+}
+.photo{
+    border: 2px dashed var(--primary-color);
+    margin: 0 auto;
+}
+img{
+    max-width: 650px;
+    margin-left: 15px;
     
 }
 .classes{
