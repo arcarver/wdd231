@@ -1,5 +1,5 @@
 header {
-    diplay: grid;
+    display: grid;
     grid-template-columns: 24px auto 44px;
     padding: px 0 5px 10px;
     align-items: end;
