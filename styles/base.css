@@ -115,13 +115,17 @@ h2{
     border: solid 2px var(--secondary-color);
     background-color: var(--accent-color);
     align-content: center;
+    /* max-width: 400px;
+    min-width: 250px; */
 }
 .photo{
     border: 2px dashed var(--primary-color);
     margin: 0 auto;
+    /* max-width: 400px;
+    min-width: 250px; */
 }
 .photo img{
-    max-width: 650px;
+    
     margin-left: 15px;
     
 }
@@ -131,6 +135,9 @@ h2{
 }
 #courses a {
     text-decoration: none;
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+    margin: 5px;
 }
 .courseDone {
     color: var(--font-color);
@@ -139,7 +146,14 @@ h2{
 .courseTodo {
     color: var(--background-color);
 }
+@media screen and (min-width: 600px) {
+    #aboutAndPhoto {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        max-width: 100%;
 
+    }
+}
 footer {
     background-color: var(--primary-color);
     padding: 1rem 10px;
