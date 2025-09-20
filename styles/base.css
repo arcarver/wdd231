@@ -13,6 +13,7 @@
     background-color: var(--background-color);
     font-family: var(--primary-font);
     padding: 5px 0 5px 10px;
+    
 
 }
 header {
@@ -139,6 +140,10 @@ h2{
     padding: 5px;
     margin: 5px;
 }
+ nav ul {
+     list-style-type: none;
+    
+ }
 .courseDone {
     color: var(--font-color);
     background-color: var(--background-color);
