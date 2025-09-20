@@ -1,14 +1,14 @@
 :root {
-    --background-color:#f1f7edff;
+    --background-color: #f1f7edff;
     --font-color: #243e36ff;
     --primary-color: #7ca982ff;
     --accent-color: #e0eec6ff;
     --secondary-color: #c2a83eff;
 
     --primary-font: montserrat-fancy, Arial,
-            sans-serif;
+        sans-serif;
     --secondary-font: "Edu QLD Beginner",
-            Geneva, serif;
+        Geneva, serif;
 
     background-color: var(--background-color);
     font-family: var(--primary-font);
@@ -16,6 +16,7 @@
     max-width: 800px;
 
 }
+
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
@@ -51,13 +52,15 @@ header span {
     font-size: 2rem;
     display: block;
 }
+
 .hamburger.show::before {
-    content:"\00D7";
+    content: "\00D7";
     color: var(--font-color);
 }
+
 .navigation {
     display: none;
-    
+
 }
 
 .navigation.active {
@@ -86,6 +89,7 @@ header span {
     text-decoration: none;
     border-bottom: solid 1px var(--secondary-color);
 }
+
 .hidden {
     display: none;
 }
@@ -97,60 +101,78 @@ header span {
 .navigation a:hover {
     background-color: var(--accent-color);
 }
-section{
+
+section {
     display: flex;
     align-content: center;
     flex-direction: column;
     justify-items: center;
 }
+
 h1 {
     display: flex;
     justify-content: center;
 }
-h2{
+
+h2 {
     display: flex;
     justify-content: center;
 }
 
-.about{
+.about {
     border: solid 2px var(--secondary-color);
     background-color: var(--accent-color);
     align-content: center;
     /* max-width: 400px;
     min-width: 250px; */
 }
-.photo{
+
+.photo {
     border: 2px dashed var(--primary-color);
     margin: 0 auto;
     /* max-width: 400px;
     min-width: 250px; */
 }
-.photo img{
-    
+
+.photo img {
+
     margin-left: 15px;
-    
+
 }
-.classes{
+
+.classes {
     background-color: var(--font-color);
     color: var(--secondary-color);
 }
+
+#courses {
+    line-height: 2;
+    border: 2px solid var(--primary-color);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 #courses a {
     text-decoration: none;
     border: 1px solid var(--secondary-color);
     padding: 5px;
     margin: 5px;
 }
- nav ul {
-     list-style-type: none;
-    
- }
+
+nav ul {
+    list-style-type: none;
+
+}
+
 .courseDone {
     color: var(--font-color);
     background-color: var(--background-color);
 }
+
 .courseTodo {
     color: var(--background-color);
 }
+
 @media screen and (min-width: 600px) {
     #aboutAndPhoto {
         display: grid;
@@ -159,16 +181,26 @@ h2{
 
     }
 }
+
 footer {
     background-color: var(--primary-color);
     padding: 1rem 10px;
     text-align: center;
 }
 
+#courseFilters {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid var(--primary-color);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 #courseFilters a {
     text-decoration: none;
     color: var(--secondary-color);
 }
+
 #courseFilters a:hover {
     background-color: var(--accent-color);
 }
@@ -198,4 +230,3 @@ footer {
 .social a:hover {
     background-color: var(--accent-color);
 }
-
