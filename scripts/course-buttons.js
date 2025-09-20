@@ -121,20 +121,29 @@ function makeTotalCredits(newCourses) {
         creditCount += newCourse.credits;
     }
     totalCreditsElement.textContent = 'The total credits for courses above is ' + creditCount;
-} 
+}
 
 courses.map(makeCards);
 makeTotalCredits(courses);
 
 const allLink = document.querySelector("#allFilter");
+const newLink = document.querySelector("#wddFilter");
+const cseLink = document.querySelector("#cseFilter");
+function removeCurrentClass() {
+    allLink.parentElement.classList.remove('current');
+    newLink.parentElement.classList.remove('current');
+    cseLink.parentElement.classList.remove('current');
+}
+
 allLink.addEventListener("click", () => {
     document.querySelector("#courses").innerHTML = "";
     courses.map(makeCards);
     makeTotalCredits(courses);
+    removeCurrentClass();
+    allLink.parentElement.classList.add('current');
 })
 
 
-const newLink = document.querySelector("#wddFilter");
 newLink.addEventListener("click", () => {
     document.querySelector("#courses").innerHTML = "";
     const newCourses = courses.filter((value) => {
@@ -142,9 +151,10 @@ newLink.addEventListener("click", () => {
     });
     newCourses.map(makeCards);
     makeTotalCredits(newCourses);
+    removeCurrentClass();
+    newLink.parentElement.classList.add('current');
 })
 
-const cseLink = document.querySelector("#cseFilter");
 cseLink.addEventListener("click", () => {
     document.querySelector("#courses").innerHTML = "";
     const newCourses = courses.filter((value) => {
@@ -152,4 +162,6 @@ cseLink.addEventListener("click", () => {
     });
     newCourses.map(makeCards);
     makeTotalCredits(newCourses);
+    removeCurrentClass();
+    cseLink.parentElement.classList.add('current');
 })

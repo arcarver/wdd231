@@ -58,22 +58,6 @@ header span {
     color: var(--font-color);
 }
 
-.navigation {
-    display: none;
-
-}
-
-.navigation.active {
-    display: block;
-    background-color: var(--secondary-color);
-}
-
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 .aboutAndPhoto section {
     padding: .8rem 10px
 }
@@ -93,12 +77,26 @@ header span {
 .hidden {
     display: none;
 }
-
-.navigation li.current {
+nav.active {
+    display: block;
     background-color: var(--secondary-color);
 }
 
-.navigation a:hover {
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+nav li.current {
+    background-color: var(--background-color);
+}
+
+nav a:hover {
     background-color: var(--accent-color);
 }
 
