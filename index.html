@@ -26,6 +26,7 @@
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/course-buttons.js" defer></script>
+    <!-- <script src="scripts/modal.js" defer></script> -->
 </head>
 
 <body>
@@ -62,15 +63,25 @@
             <h2>Web Certificate Courses</h2>
             <nav>
                 <ul id="courseFilters">
-                    <li class="current"><a id="allFilter" href="#">All</a></li>
-                    <li><a id="cseFilter" href="#">CSE</a></li>
-                    <li><a id="wddFilter" href="#">WDD</a></li>
+                    <li class="current"><a id="allFilter">All</a></li>
+                    <li><a id="cseFilter">CSE</a></li>
+                    <li><a id="wddFilter">WDD</a></li>
                 </ul>
                 <ul id="courses">
                 </ul>
                 <h4 id="totalCredits">The total credits for courses above is #</h4>
             </nav>
         </section>
+        <dialog id="course-details">
+            <button class="close-button">❌</button>
+            <span>
+                <h3 id="nameOfClass"></h3>
+            </span>
+            <h4 id="className"></h4>
+            <h5 id="numberOfCredits"></h5>
+            <h6 id="classInfo"></h6>
+
+        </dialog>
     </main>
     <footer>
         <div class="social">

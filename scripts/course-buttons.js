@@ -96,16 +96,35 @@ const courses = [
 ]
 
 const coursesList = document.querySelector("#courses");
+const modal = document.querySelector("#course-details");
+const closeModal = document.querySelector(".close-button");
+
+closeModal.addEventListener("click", () => {
+    modal.close();
+});
+
 
 function makeCards(value) {
     const liInfo = document.createElement("li");
     const aLink = document.createElement("a");
-    aLink.href = '#';
+    // aLink.href = '#';
     if (value.completed) {
         aLink.className = 'courseDone';
     } else {
         aLink.className = 'courseTodo';
     }
+
+    aLink.addEventListener("click", () => {
+        const classTitle = document.querySelector("#nameOfClass");
+        classTitle.textContent = value.subject + value.number;
+        const className = document.querySelector("#className");
+        className.textContent = value.title;
+        const credits = document.querySelector("#numberOfCredits");
+        credits.textContent = `${value.credits} credits`;
+        const infoAboutClass = document.querySelector("#classInfo");
+        infoAboutClass.textContent = value.description;
+        modal.showModal();
+    })
 
     liInfo.id = 'card';
     liInfo.appendChild(aLink);
