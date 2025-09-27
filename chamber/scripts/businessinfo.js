@@ -29,12 +29,12 @@ async function setupBusinesses() {
         sectionElement.appendChild(divElement);
 
         // <h3>Business Name</h3>
-        const nameElement = document.createElement('h3');
+        const nameElement = document.createElement('h2');
         nameElement.textContent = company.name;
         divElement.appendChild(nameElement);
 
         // <h4>Business Tag line</h4>
-        const tagLineElement = document.createElement('h4');
+        const tagLineElement = document.createElement('h3');
         tagLineElement.textContent = company.tagLine;
         divElement.appendChild(tagLineElement);
 
@@ -45,17 +45,17 @@ async function setupBusinesses() {
         // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
         imageElement.setAttribute('src', company.image);
-        imageElement.setAttribute('loading', 'lazy');
+        // imageElement.setAttribute('loading', 'lazy');
         imageElement.setAttribute("alt", company.name);
         asideElement.appendChild(imageElement);
 
         // <h5>EMAIL</h5>
-        const emailElement = document.createElement("h5");
+        const emailElement = document.createElement("h4");
         emailElement.textcontent = company.email;
         asideElement.appendChild(emailElement);
 
         //         <h5>PHONE</h5>
-        const phoneElement = document.createElement("h5");
+        const phoneElement = document.createElement("h4");
         phoneElement.textContent = company.phone;
         asideElement.appendChild(phoneElement);
 
