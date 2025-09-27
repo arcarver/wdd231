@@ -222,12 +222,15 @@ aside img {
     max-width: unset;
 }
 
-#chamberContact h2 {
+#chamberContact h3 {
     text-align: center;
+    
 }
 
 #chamberContact h4 {
     margin-left: 15px;
+    margin: 0;
+    
 
 }
 
@@ -256,6 +259,9 @@ aside img {
 
 .hiddenham {
     display: none;
+}
+footer{
+    height: 15px;
 }
 
 @media screen and (min-width: 600px) {
