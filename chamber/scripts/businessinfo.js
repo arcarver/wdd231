@@ -45,6 +45,7 @@ async function setupBusinesses() {
         // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
         imageElement.setAttribute('src', company.image);
+        imageElement.className = 'businessimage';
         // imageElement.setAttribute('loading', 'lazy');
         imageElement.setAttribute("alt", company.name);
         asideElement.appendChild(imageElement);
@@ -69,7 +70,22 @@ async function setupBusinesses() {
 setupBusinesses();
 
 const displayToggleElement = document.querySelector('#displayToggle');
+let showAllContent = true;
 displayToggleElement.addEventListener("click", () => {
-    document.getElementById('switchtext').textContent = "clicked";
-
+    if (showAllContent) {
+        document.getElementById('switchtext').textContent = "List view";
+        const images = document.getElementsByClassName('businessimage');
+        for (const image of images) {
+            image.classList.add('hiddenimage');
+            image.parentElement.classList.add('listview');
+        }
+    } else {
+        document.getElementById('switchtext').textContent = "Card view";
+        const images = document.getElementsByClassName('businessimage');
+        for (const image of images) {
+            image.classList.remove('hiddenimage');
+            image.parentElement.classList.remove('listview');
+        }
+    }
+    showAllContent = !showAllContent;
 });

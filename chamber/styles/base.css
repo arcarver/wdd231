@@ -231,6 +231,14 @@ aside img {
 
 }
 
+.listview {
+    background-color: unset;
+}
+
+.hiddenimage {
+    display: none;
+}
+
 .social {
     padding: 30px 0 30px 0;
     display: flex;
