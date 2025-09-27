@@ -98,6 +98,75 @@ h1 {
     padding-bottom: 15px;
 }
 
+/* span {
+    display: none;
+} */
+.switch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.switch #switchtext {
+    margin-left: 45px;
+    margin-top: 7px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.slider {
+    width: 80px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 34px;
+    margin-bottom: 5px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: 0.4s;
+    border-radius: 34px;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 45px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--accent-color);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--font-color);
+    /* Example checked state color */
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    /* Move the thumb when checked */
+}
+
 section {
     background-color: var(--accent-color);
     border-radius: 15px;
@@ -175,6 +244,27 @@ aside img {
     max-width: unset;
     color: var(--accent-color);
     background-color: var(--font-color);
+}
+
+.hiddenham {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .hamburger {
+        display: none;
+    }
+
+    .hiddenham {
+        display: block;
+        height: 36.792px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    nav.hidden {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 600px) {

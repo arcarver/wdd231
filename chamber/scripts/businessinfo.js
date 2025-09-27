@@ -67,3 +67,9 @@ async function setupBusinesses() {
 }
 
 setupBusinesses();
+
+const displayToggleElement = document.querySelector('#displayToggle');
+displayToggleElement.addEventListener("click", () => {
+    document.getElementById('switchtext').textContent = "clicked";
+
+});
