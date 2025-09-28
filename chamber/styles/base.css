@@ -82,10 +82,6 @@ nav a {
 
 }
 
-/* nav li.current {
-    background-color: #fff;
-} */
-
 nav a:hover {
     background-color: var(--accent-color);
 }
@@ -98,9 +94,6 @@ h1 {
     padding-bottom: 15px;
 }
 
-/* span {
-    display: none;
-} */
 .switch {
     display: flex;
     justify-content: flex-start;
@@ -159,13 +152,34 @@ h1 {
 
 input:checked+.slider {
     background-color: var(--font-color);
-    /* Example checked state color */
 }
 
 input:checked+.slider:before {
     transform: translateX(26px);
-    /* Move the thumb when checked */
 }
+.hero{
+    width: 100%;
+    /* position: absolute; */
+}
+#hero{
+    width: 100%;
+    opacity: 75%;
+    border-radius: 15px;
+} 
+.action{
+    /* position: relative; */
+    border: 2px solid var(--font-color);
+    border-radius: 15px;
+    box-shadow: 15px 15px, var(--font-color);
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 5px;
+
+}
+.currentEvents, .currentWeather, .forcast, .spotlights, footer{
+ position: relative;
+}
+    
 
 section {
     background-color: var(--accent-color);
@@ -178,10 +192,8 @@ section {
 }
 
 section h3 {
-    /* width: 150px; */
     padding-left: 10px;
     text-align: center;
-    /* justify-content: center; */
 }
 
 h2 {
@@ -189,7 +201,6 @@ h2 {
 
     padding-left: 10px;
     text-align: center;
-    /* justify-content: center; */
 }
 
 h3 {
