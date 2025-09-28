@@ -165,21 +165,32 @@ input:checked+.slider:before {
     width: 100%;
     opacity: 75%;
     border-radius: 15px;
+   
 } 
 .action{
     /* position: relative; */
     border: 2px solid var(--font-color);
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 15px 15px, var(--font-color);
     text-decoration: none;
     color: var(--font-color);
-    padding: 5px;
+    padding: 6px;
 
 }
-.currentEvents, .currentWeather, .forcast, .spotlights, footer{
- position: relative;
+.currentEvents{
+    display:grid;    
+    border: 3px, dashed, var(--font-color);   
 }
-    
+ul{
+    list-style-type: none;
+    padding: 7;
+}
+.currentWeather{
+    border: 3px dotted, var(--secondary-color);
+}
+.forcast{
+    border: 3px dashed var(--font-color);
+}
 
 section {
     background-color: var(--accent-color);
@@ -294,6 +305,10 @@ footer{
         display: flex;
         justify-content: space-around;
     }
+    #currentEvents{
+        display: grid;
+    }
+    
 }
 
 @media screen and (min-width: 600px) {
@@ -317,6 +332,11 @@ footer{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         max-width: 100%;
+    }
+    .comingUp{
+        
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
     }
 }
 
