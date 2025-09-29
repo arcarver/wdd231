@@ -1,9 +1,11 @@
-
-
-async function setupBusinesses() {
+async function getAllBusinesses() {
     const response = await fetch("data/members.json");
     const jsonData = await response.text();
     const businesses = JSON.parse(jsonData);
+    return businesses;
+}
+
+async function setupFilteredCompanies(companies) {
     const cardSection = document.getElementById('businessCards');
     /*
         <section>
@@ -19,7 +21,7 @@ async function setupBusinesses() {
             </div>
         </section>
     */
-    businesses.companies.forEach(company => {
+    companies.forEach(company => {
         // <section>
         const sectionElement = document.createElement('section');
         cardSection.appendChild(sectionElement);
@@ -32,6 +34,12 @@ async function setupBusinesses() {
         const nameElement = document.createElement('h2');
         nameElement.textContent = company.name;
         divElement.appendChild(nameElement);
+
+        //membership info
+        const membershipElement = document.createElement("h2");
+        membershipElement.textContent = company.membershipLevel;
+        divElement.appendChild(membershipElement);
+
 
         // <h4>Business Tag line</h4>
         const tagLineElement = document.createElement('h3');
@@ -46,6 +54,7 @@ async function setupBusinesses() {
         const imageElement = document.createElement('img');
         imageElement.setAttribute('src', company.image);
         imageElement.className = 'businessimage';
+
         // imageElement.setAttribute('loading', 'lazy');
         imageElement.setAttribute("alt", company.name);
         asideElement.appendChild(imageElement);
@@ -55,10 +64,7 @@ async function setupBusinesses() {
         emailElement.textcontent = company.email;
         asideElement.appendChild(emailElement);
 
-        //membership info
-        const membershipElement = document.createElement("h4");
-        membershipElement.textcontent = company.membershipLevel;
-        asideElement.appendChild(membershipElement);
+        
         //         <h5>PHONE</h5>
         const phoneElement = document.createElement("h4");
         phoneElement.textContent = company.phone;
@@ -71,25 +77,46 @@ async function setupBusinesses() {
     });
 }
 
-setupBusinesses();
+async function setSilverAndGoldBusinesses() {
+    const businesses = await getAllBusinesses();
+    const companies = businesses.companies.filter((company) => {
+        return company.membershipLevel === "Silver" || company.membershipLevel === "Gold";
+    })
 
-const displayToggleElement = document.querySelector('#displayToggle');
-let showAllContent = true;
-displayToggleElement.addEventListener("click", () => {
-    if (showAllContent) {
-        document.getElementById('switchtext').textContent = "List view";
-        const images = document.getElementsByClassName('businessimage');
-        for (const image of images) {
-            image.classList.add('hiddenimage');
-            image.parentElement.classList.add('listview');
-        }
-    } else {
-        document.getElementById('switchtext').textContent = "Card view";
-        const images = document.getElementsByClassName('businessimage');
-        for (const image of images) {
-            image.classList.remove('hiddenimage');
-            image.parentElement.classList.remove('listview');
-        }
-    }
-    showAllContent = !showAllContent;
-});
+    setupFilteredCompanies(companies);
+}
+
+setSilverAndGoldBusinesses();
+//setupFilteredBusinesses();
+
+//filter gold and silver
+// if (membershipLevel === "silver" || membershipLevel === "gold")
+// {
+//     const images = document.getElementsByClassName('businessimage');
+//     for (const image of images) {
+//         image.classList.add('hiddenimage');
+//         image.parentElement.classList.add('listview');
+//     }
+    
+// }
+
+// const displayToggleElement = document.querySelector('#displayToggle');
+// let showAllContent = true;
+// displayToggleElement.addEventListener("click", () => {
+//     if (showAllContent) {
+//         document.getElementById('switchtext').textContent = "List view";
+//         const images = document.getElementsByClassName('businessimage');
+//         for (const image of images) {
+//             image.classList.add('hiddenimage');
+//             image.parentElement.classList.add('listview');
+//         }
+//     } else {
+//         document.getElementById('switchtext').textContent = "Card view";
+//         const images = document.getElementsByClassName('businessimage');
+//         for (const image of images) {
+//             image.classList.remove('hiddenimage');
+//             image.parentElement.classList.remove('listview');
+//         }
+//     }
+//     showAllContent = !showAllContent;
+// });
