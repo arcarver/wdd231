@@ -6,7 +6,7 @@ async function getAllBusinesses() {
 }
 
 async function setupFilteredCompanies(companies) {
-    const cardSection = document.getElementById('businessCards');
+    const cardSection = document.getElementById('businessSpotlight');
     if (companies.length > 1) {
         const firstNumber = Math.floor(Math.random() * companies.length);
         let secondNumber = Math.floor(Math.random() * companies.length);
@@ -44,12 +44,6 @@ async function setupFilteredCompanies(companies) {
         const nameElement = document.createElement('h2');
         nameElement.textContent = company.name;
         divElement.appendChild(nameElement);
-
-        //membership info
-        const membershipElement = document.createElement("h2");
-        membershipElement.textContent = company.membershipLevel;
-        divElement.appendChild(membershipElement);
-
 
         // <h4>Business Tag line</h4>
         const tagLineElement = document.createElement('h3');

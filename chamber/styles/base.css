@@ -201,6 +201,10 @@ ul{
     display: grid;
     justify-content: flex-end;
 }
+.spotlights {
+    flex-direction: column;
+    display: flex;
+}
 /* #forecast{
     
 }
