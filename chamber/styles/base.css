@@ -201,6 +201,9 @@ ul{
     display: grid;
     justify-content: flex-end;
 }
+#forecastdays{
+    display: unset;
+}
 .spotlights {
     flex-direction: column;
     display: flex;

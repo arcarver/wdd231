@@ -24,21 +24,21 @@ function getStringDate(dayOfWeek) {
     }
     switch (dayOfWeek) {
         case 0:
-            return 'Sun:   ';
+            return 'Sunday:';
         case 1:
-            return 'Mon:   ';
+            return 'Monday:';
         case 2:
-            return 'Tue:   ';
+            return 'Tuesday:';
         case 3:
-            return 'Wed:   ';
+            return 'Wednesday:';
         case 4:
-            return 'Thu:   ';
+            return 'Thursday:';
         case 5:
-            return 'Fri:   ';
+            return 'Friday:';
         case 6:
-            return 'Sat:   ';
+            return 'Saturday:';
         default:
-            return '???:   ';
+            return '???:';
     }
 }
 
