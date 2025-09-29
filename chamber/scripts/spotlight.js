@@ -55,6 +55,10 @@ async function setupBusinesses() {
         emailElement.textcontent = company.email;
         asideElement.appendChild(emailElement);
 
+        //membership info
+        const membershipElement = document.createElement("h4");
+        membershipElement.textcontent = company.membershipLevel;
+        asideElement.appendChild(membershipElement);
         //         <h5>PHONE</h5>
         const phoneElement = document.createElement("h4");
         phoneElement.textContent = company.phone;
