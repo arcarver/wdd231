@@ -7,6 +7,16 @@ async function getAllBusinesses() {
 
 async function setupFilteredCompanies(companies) {
     const cardSection = document.getElementById('businessCards');
+    if (companies.length > 1) {
+        const firstNumber = Math.floor(Math.random() * companies.length);
+        let secondNumber = Math.floor(Math.random() * companies.length);
+        while (secondNumber === firstNumber) {
+            secondNumber = Math.floor(Math.random() * companies.length);
+        }
+
+        companies = [companies[firstNumber], companies[secondNumber]];
+    }
+     
     /*
         <section>
             <div>
