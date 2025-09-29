@@ -200,7 +200,9 @@ ul {
     list-style-type: none;
     padding: 7px;
 }
-
+#weatherIcon{
+    width: 75px;
+}
 .currentWeather {
     border: 3px dotted var(--secondary-color);
     display: grid;
