@@ -182,7 +182,7 @@ input:checked+.slider:before {
     /* position: relative; */
     border: 2px solid var(--font-color);
     border-radius: 10px;
-    box-shadow: 15px 15px, var(--font-color);
+    box-shadow: 6px 6px var(--primary-color);
     text-decoration: none;
     color: var(--font-color);
     padding: 6px;
@@ -193,16 +193,16 @@ input:checked+.slider:before {
 
 .currentEvents {
     display: grid;
-    border: 3px, dashed, var(--font-color);
+    border: 3px dashed var(--font-color);
 }
 
 ul {
     list-style-type: none;
-    padding: 7;
+    padding: 7px;
 }
 
 .currentWeather {
-    border: 3px dotted, var(--secondary-color);
+    border: 3px dotted var(--secondary-color);
     display: grid;
 }
 
