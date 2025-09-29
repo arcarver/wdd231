@@ -159,12 +159,17 @@ input:checked+.slider:before {
 }
 .hero{
     width: 100%;
+    
     /* position: absolute; */
+}
+.join{
+    background-color: var(--secondary-color);
 }
 #hero{
     width: 100%;
     opacity: 75%;
     border-radius: 15px;
+    
    
 } 
 .action{
@@ -175,6 +180,8 @@ input:checked+.slider:before {
     text-decoration: none;
     color: var(--font-color);
     padding: 6px;
+    background-color: var(--font-color);
+    color: var(--background-color);
 
 }
 .currentEvents{
@@ -187,11 +194,19 @@ ul{
 }
 .currentWeather{
     border: 3px dotted, var(--secondary-color);
+    display: grid;
 }
-.forcast{
+.forecast{
     border: 3px dashed var(--font-color);
+    display: grid;
+    justify-content: flex-end;
 }
-
+/* #forecast{
+    
+}
+#forecast li{
+    
+} */
 section {
     background-color: var(--accent-color);
     border-radius: 15px;
