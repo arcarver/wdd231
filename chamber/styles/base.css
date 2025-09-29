@@ -157,22 +157,28 @@ input:checked+.slider {
 input:checked+.slider:before {
     transform: translateX(26px);
 }
-.hero{
+
+.hero {
     width: 100%;
-    
+
     /* position: absolute; */
 }
-.join{
+
+.join {
+    position: absolute;
+    z-index: 1;
     background-color: var(--secondary-color);
 }
-#hero{
+
+#hero {
     width: 100%;
     opacity: 75%;
     border-radius: 15px;
-    
-   
-} 
-.action{
+
+
+}
+
+.action {
     /* position: relative; */
     border: 2px solid var(--font-color);
     border-radius: 10px;
@@ -184,30 +190,37 @@ input:checked+.slider:before {
     color: var(--background-color);
 
 }
-.currentEvents{
-    display:grid;    
+
+.currentEvents {
+    display: grid;
     border: 3px, dashed, var(--font-color);
 }
-ul{
+
+ul {
     list-style-type: none;
     padding: 7;
 }
-.currentWeather{
+
+.currentWeather {
     border: 3px dotted, var(--secondary-color);
     display: grid;
 }
-.forecast{
+
+.forecast {
     border: 3px dashed var(--font-color);
     display: grid;
     justify-content: flex-end;
 }
-#forecastdays{
+
+#forecastdays {
     display: unset;
 }
+
 .spotlights {
     flex-direction: column;
     display: flex;
 }
+
 /* #forecast{
     
 }
@@ -268,13 +281,13 @@ aside img {
 
 #chamberContact h3 {
     text-align: center;
-    
+
 }
 
 #chamberContact h4 {
     margin-left: 15px;
     margin: 0;
-    
+
 
 }
 
@@ -304,7 +317,8 @@ aside img {
 .hiddenham {
     display: none;
 }
-footer{
+
+footer {
     height: 15px;
 }
 
@@ -323,14 +337,16 @@ footer{
     nav.hidden {
         display: block;
     }
-    ul{
+
+    ul {
         display: flex;
         justify-content: space-around;
     }
-    #currentEventDays{
+
+    #currentEventDays {
         display: grid;
     }
-    
+
 }
 
 @media screen and (min-width: 600px) {
@@ -355,24 +371,29 @@ footer{
         grid-template-columns: 33% 33% 33%;
         max-width: 100%;
     }
-    .comingUp{
-        
+
+    .comingUp {
+
         display: grid;
         grid-template-columns: 33% 33% 33%;
     }
+
     .spotlights {
         display: grid;
         grid-template-columns: 100%;
         max-width: unset;
         margin-right: 5px;
     }
+
     #businessSpotlight {
         display: grid;
         grid-template-columns: 50% 50%;
     }
+
     #buisnessSpotlight {
         max-width: 50%;
     }
+
     .spotlight-section {
         max-width: unset;
     }
