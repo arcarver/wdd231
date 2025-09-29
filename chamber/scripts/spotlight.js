@@ -34,6 +34,7 @@ async function setupFilteredCompanies(companies) {
     companies.forEach(company => {
         // <section>
         const sectionElement = document.createElement('section');
+        sectionElement.classList.add('spotlight-section');
         cardSection.appendChild(sectionElement);
 
         // <div>

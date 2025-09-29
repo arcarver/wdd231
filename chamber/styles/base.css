@@ -186,7 +186,7 @@ input:checked+.slider:before {
 }
 .currentEvents{
     display:grid;    
-    border: 3px, dashed, var(--font-color);   
+    border: 3px, dashed, var(--font-color);
 }
 ul{
     list-style-type: none;
@@ -327,7 +327,7 @@ footer{
         display: flex;
         justify-content: space-around;
     }
-    #currentEvents{
+    #currentEventDays{
         display: grid;
     }
     
@@ -359,6 +359,22 @@ footer{
         
         display: grid;
         grid-template-columns: 33% 33% 33%;
+    }
+    .spotlights {
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: unset;
+        margin-right: 5px;
+    }
+    #businessSpotlight {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #buisnessSpotlight {
+        max-width: 50%;
+    }
+    .spotlight-section {
+        max-width: unset;
     }
 }
 
