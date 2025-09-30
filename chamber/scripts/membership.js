@@ -38,3 +38,23 @@ level: 'NonProfit',
         ]
     },
 ]
+const coursesList = document.querySelector("#levels");
+const modal = document.querySelector("#levelDetails");
+const closeModal = document.querySelector(".close-button");
+
+
+closeModal.addEventListener("click", () => {
+    modal.close();
+});
+
+aLink.addEventListener("click", () => {
+    const membershipName = document.querySelector("#levelName");
+    membershipName.textContent = value.level;
+    const price = document.querySelector("#cost");
+    price.textContent = value.cost;
+    const levelBenefits = document.querySelector("#benefits");
+    levelBenefits.textContent = `${value.benefits} credits`;
+
+    
+    modal.showModal();
+})
