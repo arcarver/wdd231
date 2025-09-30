@@ -11,30 +11,30 @@ const membershipDetails = [
         ]
     },
     {
-    level: 'Silver',
-    cost: 100,
-    benefits: [       
-        'Featured Spotlight',
-        'Monthly Networking Breakfast',
-        'Monthly Newsletter',
-        'Quarterly Seminars'
-    ]
-    },
-{
-level: 'Bronze',
-    cost: 50,
-        benefits: [                      
+        level: 'Silver',
+        cost: 100,
+        benefits: [
+            'Featured Spotlight',
             'Monthly Networking Breakfast',
             'Monthly Newsletter',
             'Quarterly Seminars'
         ]
     },
-{
-level: 'NonProfit',
-    cost: 150,
-        benefits: [                      
+    {
+        level: 'Bronze',
+        cost: 50,
+        benefits: [
             'Monthly Networking Breakfast',
-            'Monthly Newsletter',           
+            'Monthly Newsletter',
+            'Quarterly Seminars'
+        ]
+    },
+    {
+        level: 'NonProfit',
+        cost: 150,
+        benefits: [
+            'Monthly Networking Breakfast',
+            'Monthly Newsletter',
         ]
     },
 ]
@@ -47,7 +47,8 @@ closeModal.addEventListener("click", () => {
     modal.close();
 });
 
-aLink.addEventListener("click", () => {
+const goldLink = document.querySelector('#gold');
+goldLink.addEventListener("click", () => {
     const membershipName = document.querySelector("#levelName");
     membershipName.textContent = value.level;
     const price = document.querySelector("#cost");
@@ -55,6 +56,6 @@ aLink.addEventListener("click", () => {
     const levelBenefits = document.querySelector("#benefits");
     levelBenefits.textContent = `${value.benefits} credits`;
 
-    
+
     modal.showModal();
 })

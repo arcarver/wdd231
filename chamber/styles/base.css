@@ -14,7 +14,6 @@
     margin-left: 15px;
     font-family: var(--secondary-font);
     min-width: 250px;
-
 }
 
 header {
@@ -40,7 +39,6 @@ span {
     width: 30px;
     padding: 5px;
     margin: 5px;
-
 }
 
 .hamburger::before {
@@ -64,7 +62,6 @@ nav.hidden {
 
 nav.show {
     display: block;
-
 }
 
 nav ul {
@@ -135,7 +132,6 @@ h1 {
     background-color: var(--secondary-color);
     transition: 0.4s;
     border-radius: 34px;
-
 }
 
 .slider:before {
@@ -160,8 +156,6 @@ input:checked+.slider:before {
 
 .hero {
     width: 100%;
-
-    /* position: absolute; */
 }
 
 .join {
@@ -174,8 +168,6 @@ input:checked+.slider:before {
     width: 100%;
     opacity: 75%;
     border-radius: 15px;
-
-
 }
 
 .action {
@@ -188,7 +180,6 @@ input:checked+.slider:before {
     padding: 6px;
     background-color: var(--font-color);
     color: var(--background-color);
-
 }
 
 .currentEvents {
@@ -223,12 +214,6 @@ ul {
     display: flex;
 }
 
-/* #forecast{
-    
-}
-#forecast li{
-    
-} */
 section {
     background-color: var(--accent-color);
     border-radius: 15px;
@@ -246,7 +231,6 @@ section h3 {
 
 h2 {
     font-family: var(--primary-font);
-
     padding-left: 10px;
     text-align: center;
 }
@@ -283,14 +267,11 @@ aside img {
 
 #chamberContact h3 {
     text-align: center;
-
 }
 
 #chamberContact h4 {
     margin-left: 15px;
     margin: 0;
-
-
 }
 
 .listview {
@@ -356,7 +337,6 @@ footer {
         display: grid;
         grid-template-columns: 50% 50%;
         max-width: 100%;
-
     }
 }
 
@@ -365,7 +345,6 @@ footer {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         max-width: 100%;
-
     }
 
     footer {
@@ -375,7 +354,6 @@ footer {
     }
 
     .comingUp {
-
         display: grid;
         grid-template-columns: 33% 33% 33%;
     }
@@ -406,6 +384,5 @@ footer {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         max-width: 100%;
-
     }
 }
