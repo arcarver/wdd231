@@ -38,7 +38,7 @@ const membershipDetails = [
         ]
     },
 ]
-const coursesList = document.querySelector("#levels");
+// const coursesList = document.querySelector("#levels");
 const modal = document.querySelector("#levelDetails");
 const closeModal = document.querySelector(".close-button");
 
@@ -46,47 +46,31 @@ const closeModal = document.querySelector(".close-button");
 closeModal.addEventListener("click", () => {
     modal.close();
 });
+
+function showModal(membership) {
+    const levelName = document.querySelector("#levelName");
+    levelName.textContent = membership.level;
+    cost.textContent = membership.cost;
+    benefits.textContent = membership.benefits;
+    modal.showModal();
+}
 //make one for each level, silver, bronze 
 const goldLink = document.querySelector('#gold');
 goldLink.addEventListener("click", () => {
-    const membershipName = document.querySelector("#levelName");
-    membershipName.textContent = value.level;
-    const price = document.querySelector("#cost");
-    price.textContent = value.cost;
-    const levelBenefits = document.querySelector("#benefits");
-    levelBenefits.textContent = `${value.benefits} credits`;
-    modal.showModal();
+    showModal(membershipDetails[0]);
 })
 
 const silverLink = document.querySelector('#silver');
-silverLinkLink.addEventListener("click", () => {
-    const membershipName = document.querySelector("#levelName");
-    membershipName.textContent = value.level;
-    const price = document.querySelector("#cost");
-    price.textContent = value.cost;
-    const levelBenefits = document.querySelector("#benefits");
-    levelBenefits.textContent = `${value.benefits} credits`;
-    modal.showModal();
+silverLink.addEventListener("click", () => {
+    showModal(membershipDetails[1]);
 })
 
 const bronzeLink = document.querySelector('#bronze');
 bronzeLink.addEventListener("click", () => {
-    const membershipName = document.querySelector("#levelName");
-    membershipName.textContent = value.level;
-    const price = document.querySelector("#cost");
-    price.textContent = value.cost;
-    const levelBenefits = document.querySelector("#benefits");
-    levelBenefits.textContent = `${value.benefits} credits`;
-    modal.showModal();
+    showModal(membershipDetails[2]);
 })
 
 const npLink = document.querySelector('#np');
 npLink.addEventListener("click", () => {
-    const membershipName = document.querySelector("#levelName");
-    membershipName.textContent = value.level;
-    const price = document.querySelector("#cost");
-    price.textContent = value.cost;
-    const levelBenefits = document.querySelector("#benefits");
-    levelBenefits.textContent = `${value.benefits} credits`;
-    modal.showModal();
+    showModal(membershipDetails[3]); 
 })
