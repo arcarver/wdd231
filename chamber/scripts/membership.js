@@ -39,7 +39,7 @@ const membershipDetails = [
     },
 ]
 // const coursesList = document.querySelector("#levels");
-const modal = document.querySelector("#levelDetails");
+const modal = document.querySelector("#levelDetailsDialog");
 const closeModal = document.querySelector(".close-button");
 
 
@@ -72,5 +72,5 @@ bronzeLink.addEventListener("click", () => {
 
 const npLink = document.querySelector('#np');
 npLink.addEventListener("click", () => {
-    showModal(membershipDetails[3]); 
+    showModal(membershipDetails[3]);
 })
