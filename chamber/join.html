@@ -53,8 +53,8 @@
                         title="Your First Name"></label>
                 <label>Last Name: <input type="text" name="last" required autocomplete="family-name"
                         title="Your Last Name"></label>
-                <label>Organizational Title: </Title><input type="text" name="title" required
-                        autocomplete="organization-title" title="Your Work Title"></label>
+                <label>Organizational Title: </Title><input type="text" pattern="[A-Za-z \-]{7,}" name="title" required
+                        autocomplete="organization-title" title="Your Work Title (minimum 7 characters)"></label>
                 <label>Email Address: <input type="email" name="email" required autocomplete="email"
                         title="email.@email.com"></label>
                 <label>Cell Phone Number: <input type="tel" name="phone" required autocomplete="tel"
@@ -71,14 +71,15 @@
                         Membership</label>
                 </section>
                 <h3>Business or Organization Description</h3>
-                <label id="comments">Additonal Comments: <textarea title="description" name="description"></textarea></label>
+                <label id="comments">Additonal Comments: <textarea title="description"
+                        name="description"></textarea></label>
                 <input type="hidden" name="timestamp" id="timestamp">
 
                 <button type="submit" name="submit" id="submit">Join Our Chamber of Comerce</button>
 
 
             </form>
-        
+
             <nav class="membershipLevels">
                 <section class="membershipLevels">
                     <h4 id="levels">Membership Levels</h4>

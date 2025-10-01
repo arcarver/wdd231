@@ -334,20 +334,16 @@ label{
 }
 @keyframes colorChange {
     0% {
-        border: var(--accent-color);
+        border-color: var(--accent-color);
     }
-    25% {
-        border: 5px var(--font-color);
+    33% {
+        border-color: var(--font-color);
     }
-    50% {
-        border: 7px var(--accent-color);
-    }
-
-    75% {
-        border: 5px var(--font-color);
+    66% {
+        border-color: var(--accent-color);
     }
     100% {
-        border: 4px;
+        border-color: var(--font-color);
     }
 }
 .membershipLevels{
@@ -361,8 +357,7 @@ label{
     background-color: var(--secondary-color);
     padding:15px;
     border: 4px dotted var(--background-color);
-    animation: colorChange 6s infinite alternate solid;
-
+    animation: colorChange 3s infinite alternate;
 }
 #signature {
     display: grid;
