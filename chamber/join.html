@@ -45,7 +45,7 @@
                 <li class="current"><a href="join.html">Join</a></li>
             </ul>
         </nav>
-        <div>
+        <div class="enroll">
             <h1>Join Our Chamber of Commerce</h1>
 
             <form method="GET" action="thankyou.html" class="formEnroll">
@@ -53,7 +53,7 @@
                         title="Your First Name"></label>
                 <label>Last Name: <input type="text" name="last" required autocomplete="family-name"
                         title="Your Last Name"></label>
-                <label>Organizational Title: </Title>: <input type="text" name="title" required
+                <label>Organizational Title: </Title><input type="text" name="title" required
                         autocomplete="organization-title" title="Your Work Title"></label>
                 <label>Email Address: <input type="email" name="email" required autocomplete="email"
                         title="email.@email.com"></label>
@@ -63,30 +63,32 @@
                 <label>Business or Organization Name: <input type="text" name="organization" required
                         autocomplete="organization" title="Company or Organization Name"></label>
                 <h2>Membership Level</h2>
-                <label><input type="radio" name="level" value="Gold Membership" checked>Gold Membership</label>
-                <label><input type="radio" name="level" value="Silver Membership">Silver Membership</label>
-                <label><input type="radio" name="level" value="Bronze Membership">Bronze Membership</label>
-                <label><input type="radio" name="level" value="NP Membership for Non Profits Free">Non Profit
-                    Membership</label>
-
+                <section class="radio">
+                    <label><input type="radio" name="level" value="Gold Membership" checked>Gold Membership</label>
+                    <label><input type="radio" name="level" value="Silver Membership">Silver Membership</label>
+                    <label><input type="radio" name="level" value="Bronze Membership">Bronze Membership</label>
+                    <label><input type="radio" name="level" value="NP Membership for Non Profits Free">Non Profit
+                        Membership</label>
+                </section>
                 <h3>Business or Organization Description</h3>
-                <label><textarea title="description" name="description"></textarea></label>
+                <label id="comments">Additonal Comments: <textarea title="description" name="description"></textarea></label>
                 <input type="hidden" name="timestamp" id="timestamp">
 
                 <button type="submit" name="submit" id="submit">Join</button>
 
 
             </form>
+        
+            <nav>
+                <section class="membershipLevels">
+                    <h4 id="levels">Membership Levels</h4>
+                    <p id="gold">Gold Membership</p>
+                    <p id="silver">Silver Membership</p>
+                    <p id="bronze">Bronze Membership</p>
+                    <p id="np">Nonprofit Membership</p>
+                </section>
+            </nav>
         </div>
-        <nav>
-            <section>
-                <h4 id="levels">Membership Levels</h4>
-                <p id="gold">Gold Membership</p>
-                <p id="silver">Silver Membership</p>
-                <p id="bronze">Bronze Membership</p>
-                <p id="np">Nonprofit Membership</p>
-            </section>
-        </nav>
         <dialog id="levelDetails">
             <button class="close-button">❌</button>
             <h5 id="levelName"></h5>
