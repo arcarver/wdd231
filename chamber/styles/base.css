@@ -332,9 +332,28 @@ label{
     margin: 13px 32px 18px 32px;
     background-color: var(--secondary-color);
 }
+@keyframes colorChange {
+    0% {
+        border: var(--accent-color);
+    }
+    25% {
+        border: 5px var(--font-color);
+    }
+    50% {
+        border: 7px var(--accent-color);
+    }
+
+    75% {
+        border: 5px var(--font-color);
+    }
+    100% {
+        border: 4px;
+    }
+}
 .membershipLevels{
     display: grid;
     background-color: var(--primary-color);
+    
     max-width: 360px;
     padding: 20px;
 }
@@ -342,6 +361,7 @@ label{
     background-color: var(--secondary-color);
     padding:15px;
     border: 4px dotted var(--background-color);
+    animation: colorChange 6s infinite alternate solid;
 
 }
 #signature {
