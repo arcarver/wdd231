@@ -1,0 +1,34 @@
+:root{
+    --primary-color: #de1a1aff;
+    --secondary-font: #593c8fff;
+    --background: #8ef9f3ff;
+    --primary-font: #171738ff;
+    --secondary-color: #d78521ff;
+    
+    --primary-font: ntserrat-fancy, Arial, sans-serif;
+    --secondary-font: "Edu QLD Beginner", Geneva, serif;
+
+    font-family: var(--primary-font);
+    background-color: var(--background);
+    color: var(--primary-font);
+
+}
+li{
+    list-style: none;
+}
+#rojo{
+    color: var(--primary-color);
+}
+#purple{
+    color: var(--secondary-font);
+}
+#lightBlue{
+    color: var(--background);
+    background-color: var(--primary-font);
+}
+#darkBlue{
+    color: var(--primary-font);
+}
+#orange{
+    color: var(--secondary-color);
+}
