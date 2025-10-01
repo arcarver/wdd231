@@ -5,7 +5,8 @@
     --accent-color: #e0eec6ff;
     --secondary-color: #c2a83eff;
 
-    --primary-font: montserrat-fancy, Arial,
+    --primary-font: 
+    ntserrat-fancy, Arial,
         sans-serif;
     --secondary-font: "Edu QLD Beginner",
         Geneva, serif;
@@ -358,6 +359,22 @@ label{
     padding:15px;
     border: 4px dotted var(--background-color);
     animation: colorChange 3s infinite alternate;
+}
+#levelDetails{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 30% 30% 30%;
+    max-width: 400px;
+    background-color: var(--accent-color);
+}
+.close-button{
+    grid-column: 2/3;
+}
+#levelName{
+    grid-area: 1/1/2/2;
+}
+#benefits{
+    grid-area: 3/1/4/3;
 }
 #signature {
     display: grid;
