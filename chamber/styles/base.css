@@ -369,6 +369,8 @@ label{
 }
 .close-button{
     grid-column: 2/3;
+    background-color: var(--accent-color);
+    border: none;
 }
 #levelName{
     grid-area: 1/1/2/2;
