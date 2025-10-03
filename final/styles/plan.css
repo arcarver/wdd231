@@ -1,8 +1,8 @@
 :root{
     --primary-color: #de1a1aff;
-    --secondary-font: #593c8fff;
+    --secondary-font-color: #593c8fff;
     --background: #8ef9f3ff;
-    --primary-font: #171738ff;
+    --primary-font-color: #171738ff;
     --secondary-color: #d78521ff;
     
     --primary-font: ntserrat-fancy, Arial, sans-serif;
@@ -13,6 +13,18 @@
     color: var(--primary-font);
 
 }
+#info{
+    border: 2px dashed var(--primary-color);
+    padding: 15px;
+    border-radius: 10px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--secondary-font);
+}
+#color{
+    border: 4px dotted var(--secondary-color);
+    padding: 15px;
+}
 li{
     list-style: none;
 }
@@ -20,15 +32,21 @@ li{
     color: var(--primary-color);
 }
 #purple{
-    color: var(--secondary-font);
+    color: var(--secondary-font-color);
 }
 #lightBlue{
     color: var(--background);
-    background-color: var(--primary-font);
+    background-color: var(--primary-font-color);
 }
 #darkBlue{
     color: var(--primary-font);
 }
 #orange{
     color: var(--secondary-color);
+}
+#main{
+    font-family: var(--primary-font);
+}
+#second{
+    font-family: var(--secondary-font);
 }
