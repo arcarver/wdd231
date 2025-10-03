@@ -37,19 +37,29 @@ li{
 }
 #rojo{
     color: var(--primary-color);
+    background-color: white;
+    padding: 2px;
 }
 #purple{
     color: var(--secondary-font-color);
+    padding: 2px;
 }
 #lightBlue{
     color: var(--background);
     background-color: var(--primary-font-color);
+    padding: 2px;
 }
 #darkBlue{
     color: var(--primary-font);
+    padding: 2px;
 }
 #orange{
     color: var(--secondary-color);
+    background-color: var(--primary-font-color);
+    padding: 2px;
+}
+li{
+    padding: 2px;
 }
 #main{
     font-family: var(--primary-font);
