@@ -63,12 +63,29 @@ li{
 }
 #wire{
     background-color: var(--secondary-font-color);
+    
 }
 h6{
     font-size: medium;
     color: var(--background);
 }
 img{
-    max-width: 380px;
+    width: 380px;
+    
     padding: 10px;
+}
+@media screen and (min-width: 600px) {
+    #design{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #wire{
+        max-width: 800px;
+        /* display: flex;
+        flex-direction: column; */
+        
+    }
+    img{
+        width: 600px;
+    }
 }
