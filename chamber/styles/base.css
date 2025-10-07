@@ -421,7 +421,7 @@ footer {
     height: 15px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38rem) {
     .hamburger {
         display: none;
     }
@@ -476,7 +476,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 54rem) {
     #businessCards {
         display: grid;
         grid-template-columns: 33% 33% 33%;
@@ -515,7 +515,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 998px) {
+@media screen and (min-width: 64rem) {
     #businessCards {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
