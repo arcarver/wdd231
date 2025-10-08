@@ -1,0 +1,51 @@
+{
+    "Disneyland":{
+        "name": "Disneyland",
+        "address": "1313 S. Disneyland Dr, Anaheim, CA 92802",
+        "description": "The iconic original Disney theme park: filled with themed lands (Fantasyland, Adventureland, Tomorrowland, etc.), classic attractions, parades, fireworks, and immersive storytelling. It’s often called “The Happiest Place on Earth.”",
+        "picture": "images/toontown.webp"
+    },
+    "Anaheim Packing House": {
+        "name": "Anaheim Packing House",
+        "address": "440 S. Anaheim Blvd, Anaheim, CA 92805",
+        "description": "Once a citrus packing facility, now a restored gourmet food hall and gathering spot. You'll find dozens of food vendors, communal seating, live music, and a lively local vibe.",
+        "picture": "images/packingHouse.webp"
+    },
+    "Oak Canyon Nature Center": {
+        "name": "Oak Canyon Nature Center",
+        "address": "6700 E. Walnut Canyon Rd, Anaheim, CA 92807",
+        "description": "A 58‑acre nature preserve tucked into Anaheim Hills, with about 4 miles of hiking trails, oak woodland, riparian habitat, and a small interpretive center with live animal exhibits.",
+        "picture": "images/oakCanyon.webp"
+    },
+    "Menzu Museum & Cultural Center": {
+        "name": "Menzu Museum & Cultural Center",
+        "address": "241 S. Anaheim Blvd, Anaheim, CA 92805",
+        "description": "A local museum in downtown Anaheim that offers rotating exhibits in art, local history, and cultural themes. It’s a quieter stop for those looking to explore Anaheim’s cultural side.",
+        "picture": "images/bicycles.webp"
+    },
+    "K1 Speed (Go-Karting)": {
+        "name": "K1 Speed (Go-Karting)",
+        "address": "3175 E. La Palma Ave, Anaheim, CA 92806 ",
+        "description": "Indoor electric go-kart racing for speed and thrills in a controlled environment. A fun option if you want some action outside of Disney.",
+        "picture": "images/gocart.webp"
+    },
+    "Founders' Park + Woelke-Stoffel House": {
+        "name": "Founders' Park + Woelke-Stoffel House",
+        "address": "400 N. West St, Anaheim, CA 92805",
+        "description": "A heritage park featuring the Woelke‑Stoffel House (a restored Victorian / Queen Anne home), the Mother Colony House, and carriage house. Tours are offered occasionally (often the first Saturday of each month).",
+        "picture": "images/figTree.webp"
+    },
+    "Storybook Land Canal Boats": {
+        "name": "Storybook Land Canal Boats",
+        "address": "1313 Disneyland Dr, Anaheim, CA 92802",
+        "description": "Hop aboard a charming open-air boat piloted by a Disneyland Cast Member and float through a beautifully detailed miniature world. The Storybook Land Canal Boats take you past tiny scenes from beloved Disney animated films, all nestled into a lush, landscaped setting.",
+        "picture": "images/boatRide.webp"
+    },
+    "Angel Stadium": {
+        "name": "Angel Stadium / Honda Center",
+        "address": "2000 E. Gene Autry Way, Anaheim, CA 92806",
+        "description": "Home of the Los Angeles Angels MLB team. Catch a baseball game, take a ballpark tour, or enjoy the electric atmosphere during game nights.",
+        "picture": "images.angelStadium.webp"
+    }
+
+}
