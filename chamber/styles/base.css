@@ -344,6 +344,14 @@ label {
     background-color: var(--secondary-color);
 }
 
+.membershipLevels {
+    display: grid;
+    background-color: var(--primary-color);
+
+    max-width: 360px;
+    padding: 20px;
+}
+
 @keyframes colorChange {
     0% {
         border-color: var(--accent-color);
@@ -360,14 +368,6 @@ label {
     100% {
         border-color: var(--font-color);
     }
-}
-
-.membershipLevels {
-    display: grid;
-    background-color: var(--primary-color);
-
-    max-width: 360px;
-    padding: 20px;
 }
 
 .membershipLevels p {
@@ -452,6 +452,24 @@ footer {
     height: 15px;
 }
 
+@keyframes opacityChange {
+    0% {
+        opacity: .25;
+    }
+
+    33% {
+        opacity: .5;
+    }
+
+    66% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @media screen and (min-width: 38rem) {
     .hamburger {
         display: none;
@@ -519,6 +537,10 @@ footer {
 
     .discover-section {
         max-width: unset;
+    }
+
+    .discover-image:hover {
+        animation: opacityChange 3s infinite alternate;
     }
 }
 

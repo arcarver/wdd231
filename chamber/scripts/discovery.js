@@ -37,6 +37,7 @@ async function setupDiscovery() {
 
         // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
+        imageElement.classList.add('discover-image');
         imageElement.setAttribute('src', discover.picture);
         // imageElement.className = 'businessimage';
         imageElement.setAttribute('loading', 'lazy');
