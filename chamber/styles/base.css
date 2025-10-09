@@ -528,7 +528,12 @@ footer {
         font-family: var(--primary-font);
         border: 2px dotted var(--secondary-color);
     }
+    .visits {
+        width: unset;
+        max-width: 38rem;
+        border: 2px dashed var(--font-color);
 
+    }
     .discover div {
         width: unset;
         max-width: 35rem;
