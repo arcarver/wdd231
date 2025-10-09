@@ -48,6 +48,12 @@ async function setupDiscovery() {
         const addressElement = document.createElement('address');
         addressElement.textContent = discover.address;
         divElement.appendChild(addressElement);
+
+        //  learn more button
+        const buttonElement = document.createElement('button');
+        divElement.appendChild(buttonElement);
+        divElement.classList.add('buttonLearnMore');
+        buttonElement.innerHTML = "Learn More";
     });
 }
 

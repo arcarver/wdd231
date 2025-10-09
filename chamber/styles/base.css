@@ -10,7 +10,7 @@
         sans-serif;
     --secondary-font: "Edu QLD Beginner",
         Geneva, serif;
-
+    
     color: var(--font-color);
     margin-left: 15px;
     font-family: var(--secondary-font);
@@ -54,7 +54,8 @@ span {
 }
 
 nav {
-    background-color: var(--primary-color);
+    background-color: var(--font-color);
+    
 }
 
 nav.hidden {
@@ -74,10 +75,15 @@ nav ul {
 nav a {
     display: block;
     padding: .8rem 10px;
-    color: var(--font-color);
+    
     text-decoration: none;
     border-bottom: solid 1px var(--accent-color);
+    color: var(--accent-color);
+    
 
+}
+.current a {
+    color: var(--font-color);
 }
 
 nav a:hover {
@@ -86,6 +92,7 @@ nav a:hover {
 
 .current {
     background-color: var(--accent-color);
+    
 }
 
 h1 {
@@ -450,6 +457,15 @@ label {
 .discover section{
     padding-bottom: 15px;
     margin-bottom: 2px;
+}
+.buttonLearnMore button {
+    width: 125px;
+    display: grid;
+    justify-self: center;
+    background-color: var(--font-color);
+    color: var(--accent-color);
+    border-radius: 8px;
+    margin: 5px;
 }
 
 footer {
