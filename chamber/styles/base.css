@@ -447,6 +447,10 @@ label {
 .discover div address {
     grid-area: location;
 }
+.discover section{
+    padding-bottom: 15px;
+    margin-bottom: 2px;
+}
 
 footer {
     height: 15px;
@@ -534,12 +538,23 @@ footer {
             "picture description"
             "picture location";
     }
-
+    .discover div img {
+        padding-right: 10px;
+        align-self: center;
+        
+        }
+    .discover div h2 {
+        margin-bottom: 0;
+    }
+    .discover div p {
+        margin-top: 5px;
+    }
     .discover-section {
         max-width: unset;
+        justify-content: left;
     }
 
-    .discover-image:hover {
+    .discoverImage:hover {
         animation: opacityChange 3s infinite alternate;
     }
 }
@@ -588,5 +603,9 @@ footer {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         max-width: 100%;
+    }
+    .discover {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 }

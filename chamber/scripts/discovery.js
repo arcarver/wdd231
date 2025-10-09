@@ -37,7 +37,7 @@ async function setupDiscovery() {
 
         // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
-        imageElement.classList.add('discover-image');
+        imageElement.classList.add('discoverImage');
         imageElement.setAttribute('src', discover.picture);
         // imageElement.className = 'businessimage';
         imageElement.setAttribute('loading', 'lazy');
@@ -56,10 +56,22 @@ setupDiscovery();
 const showVisits = document.querySelector(".visits");
 
 let lastVisit = Number(window.localStorage.getItem("lastVisit")) || 0;
+// lastVisit = 0;
+const currentDate = Date.now();
 
-if (lastVisit !== 0) {
-    showVisits.innerHTML = `Last visited ${new Date(lastVisit)}`;
+if (lastVisit == 0) {
+    showVisits.innerHTML = "Welcome! Let us know if you have any questions."
 } else {
-    showVisits.innerHTML = "This is your first visit. Thank you for visiting!"
+    let lastVisitDate = new Date(lastVisit);
+    // lastVisitDate = new Date(lastVisitDate.setHours(lastVisitDate.getHours() - 25));
+    const timeDifferenceInMilliseconds = currentDate - lastVisitDate;
+    const differenceInDays = Math.floor(timeDifferenceInMilliseconds / (1000 * 60 * 60 * 24));
+    if (differenceInDays < 1) {
+        showVisits.innerHTML = 'Back so soon! Awesome!'
+    } else if (differenceInDays == 1) {
+        showVisits.innerHTML = `You last visited ${differenceInDays} day ago`;
+    } else {
+        showVisits.innerHTML = `You last visited ${differenceInDays} days ago`;
+    }
 }
-localStorage.setItem("lastVisit", Date.now()); 
+localStorage.setItem("lastVisit", currentDate); 
