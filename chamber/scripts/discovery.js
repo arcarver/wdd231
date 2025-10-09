@@ -18,6 +18,7 @@ async function setupDiscovery() {
     discoveries.places.forEach(discover => {
         // <section>
         const sectionElement = document.createElement('section');
+        sectionElement.classList.add('discover-section')
         cardSection[0].appendChild(sectionElement);
 
         // <div>
@@ -34,8 +35,6 @@ async function setupDiscovery() {
         descriptionElement.textContent = discover.description;
         divElement.appendChild(descriptionElement);
 
-
-
         // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
         imageElement.setAttribute('src', discover.picture);
@@ -45,11 +44,9 @@ async function setupDiscovery() {
         divElement.appendChild(imageElement);
 
         // <address>address</address>
-        const addressElement = document.createElement("address");
-        addressElement.textcontent = discover.address;
+        const addressElement = document.createElement('address');
+        addressElement.textContent = discover.address;
         divElement.appendChild(addressElement);
-
-
     });
 }
 

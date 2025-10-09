@@ -46,7 +46,7 @@
         "name": "Angel Stadium",
         "address": "2000 E. Gene Autry Way, Anaheim, CA 92806",
         "description": "Home of the Los Angeles Angels MLB team. Catch a baseball game, take a ballpark tour, or enjoy the electric atmosphere during game nights.",
-        "picture": "images.angelStadium.webp"
+        "picture": "images/angelStadium.webp"
     }
 ]
 }
