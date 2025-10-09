@@ -15,10 +15,10 @@ async function setupDiscovery() {
             </div>
         </section>
     */
-    discoveries.discover.forEach(discover => {
+    discoveries.places.forEach(discover => {
         // <section>
         const sectionElement = document.createElement('section');
-        cardSection.appendChild(sectionElement);
+        cardSection[0].appendChild(sectionElement);
 
         // <div>
         const divElement = document.createElement('div');
@@ -26,30 +26,30 @@ async function setupDiscovery() {
 
         // <h2>Business Name</h2>
         const nameElement = document.createElement('h2');
-        nameElement.textContent = places.name;
+        nameElement.textContent = discover.name;
         divElement.appendChild(nameElement);
 
         // <p>Descripyion</p>
-        const tagLineElement = document.createElement('p');
-        tagLineElement.textContent = places.description;
-        divElement.appendChild(textContent);
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = discover.description;
+        divElement.appendChild(descriptionElement);
 
-       
+
 
         // <img src="" alt="business picture" loading="lazy">
         const imageElement = document.createElement('img');
-        imageElement.setAttribute('src', places.picture);
+        imageElement.setAttribute('src', discover.picture);
         // imageElement.className = 'businessimage';
         imageElement.setAttribute('loading', 'lazy');
-        imageElement.setAttribute("alt", places.name);
-        asideElement.appendChild(imageElement);
+        imageElement.setAttribute("alt", discover.name);
+        divElement.appendChild(imageElement);
 
         // <address>address</address>
-        const emailElement = document.createElement("address");
-        emailElement.textcontent = places.address;
-        asideElement.appendChild(addressElement);
+        const addressElement = document.createElement("address");
+        addressElement.textcontent = discover.address;
+        divElement.appendChild(addressElement);
 
-       
+
     });
 }
 
