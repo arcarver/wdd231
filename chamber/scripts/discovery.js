@@ -51,3 +51,14 @@ async function setupDiscovery() {
 }
 
 setupDiscovery();
+
+const showVisits = document.querySelector(".visits");
+
+let lastVisit = Number(window.localStorage.getItem("lastVisit")) || 0;
+
+if (lastVisit !== 0) {
+    showVisits.innerHTML = `Last visited ${new Date(lastVisit)}`;
+} else {
+    showVisits.innerHTML = "This is your first visit. Thank you for visiting!"
+}
+localStorage.setItem("lastVisit", Date.now()); 
