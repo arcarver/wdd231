@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #de1a1aff;
+    --secondary-font-color: #593c8fff;
+    --background: #8ef9f3ff;
+    --primary-font-color: #171738ff;
+    --secondary-color: #d78521ff;
+
+    --primary-font: ntserrat-fancy, Arial, sans-serif;
+    --secondary-font: "Edu QLD Beginner", Geneva, serif;
+
+    font-family: var(--primary-font);
+    background-color: var(--background);
+    color: var(--primary-font);
+}
