@@ -11,4 +11,175 @@
     font-family: var(--primary-font);
     background-color: var(--background);
     color: var(--primary-font);
+    
 }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+}
+
+header img {
+    padding: 5px;
+}
+
+span {
+    font-family: var(--primary-font);
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    display: block;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    color: var(--font-color);
+}
+
+nav {
+    background-color: var(--secondary-font-color);
+    color: var(--secondary-color)
+
+}
+
+nav.hidden {
+    display: none;
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: .8rem 10px;
+
+    text-decoration: none;
+    border-bottom: solid 1px var(--accent-color);
+    color: var(--accent-color);
+}
+
+.current a {
+    color: whitesmoke;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+.current {
+    background-color: var(--primary-color);
+
+}
+.hiddenham {
+    display: none;
+}
+#hero {
+    opacity: .7;
+    width: 100%;
+}
+h1{
+    display: grid;
+    justify-content: center;
+}
+p{
+    padding-left: 10px;
+}
+h2{
+    display: grid;
+    justify-content: center;
+}
+.horse {
+    width: 100%;
+}
+
+@media screen and (min-width: 38rem) {
+    .hamburger {
+        display: none;
+    }
+
+    .hiddenham {
+        display: block;
+        height: 36.792px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    nav.hidden {
+        display: block;
+    }
+    nav li{
+        padding-left: 15px;
+        padding-right: 15px;    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    p{
+        
+    }
+    .what {
+        grid-area: what;
+    }
+    .words {
+        grid-area: word;
+
+    }
+    .joke h2{
+        grid-area: joke;
+        /* align-content: center; */
+        /* height: 100%; */
+        border: 3px, dashed, var(--primary-color);
+        padding: 5px;
+    }
+    #randomJoke
+    {
+        grid-area: random;
+        padding: 10px 5px 10px 5px;
+    }
+    .horse {
+        grid-area: horse;
+    }
+    .dad{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "what horse"
+        "word horse"
+        "joke horse"
+        "random horse";
+
+        
+    }
+    /* h2{
+        font-size:x-large;
+    } */
+}
+@media screen and (min-width: 54rem) {
+    footer {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            max-width: 100%;
+        }
+    }
+        @media screen and (min-width: 64rem) {
+        }
