@@ -28,10 +28,12 @@ async function fetchJoke() {
         const data = await response.json();
         console.log(data);
         console.log(data.joke);
+        randomJoke.textContent = data.joke;
     } catch (error) {
         console.error('Error fetching joke:', error);
     }
 }
 
 fetchJoke();
+
 // GET https://icanhazdadjoke.com/
