@@ -1,8 +1,10 @@
-const searchJoke = document.querySelector("#randomJoke");
-async function fetchJoke() {
+const searchJoke = document.querySelector("#searchResults");
+
+async function fetchJokes() {
     try {
+        const term = document.querySelector("#searchTerm").value;
         const response = await fetch(
-            'https://icanhazdadjoke.com/',
+            `https://icanhazdadjoke.com/search?term=${term}`,
             {
                 headers: { "Accept": "application/json" },
             }
@@ -18,5 +20,6 @@ async function fetchJoke() {
         console.error('Error fetching joke:', error);
     }
 }
-
-fetchJoke();
+// searchJoke.addEventListener('input', function (event) {
+//     console.log('hi', event.target.value);
+// })

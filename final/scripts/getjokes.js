@@ -1,5 +1,5 @@
 const randomJoke = document.querySelector("#randomJoke");
-
+const jokeButton = document.querySelector("#newJoke");
 // fetch('GET https://icanhazdadjoke.com/')
 // .then(response => {
 //     if (!response.ok) {
@@ -33,6 +33,13 @@ async function fetchJoke() {
         console.error('Error fetching joke:', error);
     }
 }
+async function newJoke() {
+    fetchJoke();
+}
+
+jokeButton.addEventListener("click", () => {
+    newJoke();
+})
 
 fetchJoke();
 

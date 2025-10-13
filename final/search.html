@@ -25,6 +25,7 @@
         rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/search-jokes.js" defer></script>
 
     <!-- <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script> -->
@@ -49,28 +50,31 @@
         </nav>
         <h1>Search</h1>
         <p>What type of jokes do you like? Do you like jokes about bison or bananas? How about monkeys?</p>
-        <form method="GET" action="results.html" class="searchResults">                                                        
-                <h2>What is your favorite type of joke?</h2>
-                <section class="radio">
-                    <label><input type="radio" name="type" value="Knock Knock Jokes" checked>Knock Knock Jokes</label>
-                    <label><input type="radio" name="type" value="Puns">Puns/Wordplay</label>
-                    <label><input type="radio" name="type" value="Chicken Crossing Road Jokes">Chicken Crossing Road Jokes</label>
-                    <label><input type="radio" name="type" value="Observational">Observational</label>
-                    <label><input type="radio" name="type" value="Anecdotal">Anecdotal / Story Jokes</label>
-                    <label><input type="radio" name="type" value="Dark Humor">Dark Humor / Gallows Humor</label>
-                    <label><input type="radio" name="type" value="One Liners">One Liners</label>
-                    <label><input type="radio" name="type" value="Sarcasm">Sarcasm / Irony</label>
-                    <label><input type="radio" name="type" value="Self-Deprecating">Self-Deprecating</label>
-                    <label><input type="radio" name="type" value="Slapstick">Slapstick / Physical Comedy</label>
-                    <label><input type="radio" name="type" value="Anti-Joke">Anti-Joke</label>
-                    <label><input type="radio" name="type" value="Deadpan">Deadpan / Dry Humor</label>
-                </section>
-                <h3>What is your favorite joke?</h3>
-                <label id="yourJoke">Write your joke here: <textarea title="description" name="description"></textarea></label>
-                <input type="hidden" name="timestamp" id="timestamp">
-                <label>Joke Search Term <input type="text" name="searchTerm" title="Search Term"></label>
-                <button type="submit" name="submit" id="submit">Search for Jokes</button>
+        <form method="GET" action="results.html" class="searchResults">
+            <h2>What is your favorite type of joke?</h2>
+            <section class="radio">
+                <label><input type="radio" name="type" value="Knock Knock Jokes" checked>Knock Knock Jokes</label>
+                <label><input type="radio" name="type" value="Puns">Puns/Wordplay</label>
+                <label><input type="radio" name="type" value="Chicken Crossing Road Jokes">Chicken Crossing Road
+                    Jokes</label>
+                <label><input type="radio" name="type" value="Observational">Observational</label>
+                <label><input type="radio" name="type" value="Anecdotal">Anecdotal / Story Jokes</label>
+                <label><input type="radio" name="type" value="Dark Humor">Dark Humor / Gallows Humor</label>
+                <label><input type="radio" name="type" value="One Liners">One Liners</label>
+                <label><input type="radio" name="type" value="Sarcasm">Sarcasm / Irony</label>
+                <label><input type="radio" name="type" value="Self-Deprecating">Self-Deprecating</label>
+                <label><input type="radio" name="type" value="Slapstick">Slapstick / Physical Comedy</label>
+                <label><input type="radio" name="type" value="Anti-Joke">Anti-Joke</label>
+                <label><input type="radio" name="type" value="Deadpan">Deadpan / Dry Humor</label>
+            </section>
+            <h3>What is your favorite joke?</h3>
+            <label id="yourJoke">Write your joke here: <textarea title="description"
+                    name="description"></textarea></label>
+            <input type="hidden" name="timestamp" id="timestamp">
+            <label>Joke Search Term <input id="searchTerm" type="text" name="searchTerm" title="Search Term"></label>
+            <button type="submit" name="submit" id="submit">Search for Jokes</button>
         </form>
+        <p id="searchJokes"></p>
         <img src="images/banana.webp" alt="People in banana costumes">
     </main>
     <footer>
@@ -78,9 +82,9 @@
             <p>Possible web site address: DadJokes.com</p>
             <a href="attriubution.txt" target="_blank" title="Attributions">Attributions</a>
             <a href="">YouTube Presentation</a>
-    
+
         </section>
-    
+
         <section id="signature">
             <p>©<span id="year">Loading</span>🌳 Annie Carver 🌳 Washington</p>
             <p>Last Modified <span id="last">loading</span></p>
