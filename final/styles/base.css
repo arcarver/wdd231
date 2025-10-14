@@ -118,6 +118,38 @@ h2{
     background-color: var(--secondary-color);
     padding-bottom: 10px;
 }
+#newJoke{
+    background-color: var(--background);
+    padding: 7px 15px ;
+    margin-left: 15px;
+}
+form {
+    display: grid;
+    max-width: 356px;
+}
+.radio {
+    display: grid;
+    padding: 8px;
+    margin-left: 5px;
+    
+}
+input{
+    accent-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+label {
+    padding: 2px;
+    margin: 3px;
+}
+h3 {
+    display: grid;
+    justify-content: center;
+}
+.term {
+    display: grid;
+    
+}
 footer{
     display: flex;
 }
