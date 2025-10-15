@@ -1,8 +1,6 @@
-const searchJoke = document.querySelector("#searchResults");
-
-async function fetchJokes() {
+async function fetchJokes(term) {
     try {
-        const term = document.querySelector("#searchTerm").value;
+        const searchJoke = document.querySelector("#firstSearchJoke");
         const response = await fetch(
             `https://icanhazdadjoke.com/search?term=${term}`,
             {
@@ -15,26 +13,28 @@ async function fetchJokes() {
         const data = await response.json();
         console.log(data);
         console.log(data.joke);
-        searchJoke.textContent = data.joke;
+        searchJoke.textContent = data.results[0].joke;
     } catch (error) {
         console.error('Error fetching joke:', error);
     }
 }
 
-const myInfo = new URLSearchParams(window.location.search);
-console.log(myInfo);
+const myJokes = new URLSearchParams(window.location.search);
+console.log(myJokes);
 
-console.log(myInfo.get("first"));
+console.log(myJokes.get("type"));
 
-document.querySelector("#results").innerHTML = `
-<p>Membership for ${myInfo.get("first")} ${myInfo.get("last")}</p>
-<p>Membership level is  ${myInfo.get('level')} on ${myInfo.get('timestamp')} </p>
-<p>Your phone is ${myInfo.get('phone')}</p>
-<p>Your email is ${myInfo.get('email')}</p>
-<p>You are a ${myInfo.get('title')} at ${myInfo.get('organization')}</p>
-<p>Your email is ${myInfo.get('email')}</p>
-<p>${myInfo.get('description')}`
+const term = myJokes.get("searchTerm");
+let termOrAnything = term;
+if (termOrAnything == '') {
+    termOrAnything = 'anything';
+}
+document.querySelector("#searchResults").innerHTML = `
+<p>You are searching for a joke about ${termOrAnything}.</p>
+<p>Your favorite type of Jokes is ${myJokes.get('type')}. </p>`;
 
-// searchJoke.addEventListener('input', function (event) {
-//     console.log('hi', event.target.value);
-// })
+if (myJokes.get('description') != "") {
+    document.querySelector("#searchResults").innerHTML += `<p>Here the joke you shared: ${myJokes.get('description')}</p>`;
+}
+
+fetchJokes(term);
