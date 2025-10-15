@@ -1,23 +1,23 @@
-{
-    "definitions":
+const jokeDefinitions = 
+    
     [
         {
-            "type": "One-Liner",
+            "type": "One-Liners",
             "definition": "A very short joke delivered in a single sentence, often with a witty or surprising punchline.",
             "example": "I told my computer I needed a break, and now it won’t stop sending me vacation ads."
         },
         {
-            "type": "Dad Joke",
+            "type": "Dad Jokes",
             "definition": "A wholesome, simple pun or play on words, often associated with 'dads' for their cheesy or predictable humor.",
             "example": "What do you call fake spaghetti? An impasta."
         },
         {
-            "type": "Pun",
+            "type": "Puns",
             "definition": "A joke that exploits multiple meanings of a word or words that sound alike for a humorous effect.",
             "example": "I used to be a baker, but I couldn’t make enough dough."
         },
         {
-            "type": "Knock-Knock Joke",
+            "type": "Knock-Knock Jokes",
             "definition": "A call-and-response joke typically involving a pun in the punchline.",
             "example": "Knock knock. Who’s there? Atch. Atch who? Bless you!"
         },
@@ -82,4 +82,53 @@
             "example": "I’m not saying your perfume is too strong. I’m just saying the canary was alive before you got here."
         }
     ]
-}
+
+
+
+
+
+
+// async function jokeModal() {
+//     const response = await fetch("data/definitions.json");
+//     const jsonData = await response.text();
+//     const definitions = JSON.parse(jsonData);
+
+    // <h2> Type of joke
+    // <p> definition
+    // <p> example
+    // #jokeDetails
+    // section #typeOfJoke
+
+    const modal = document.querySelector("#jokeDetails");
+    const closeModal = document.querySelector(".close-button");
+
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
+
+    function showModal(definitions) {
+        const jokeType = document.querySelector("#typeOfClass");
+        jokeType.textContent = value.type;
+        const jokeDefinition = document.querySelector("#definition");
+        jokeDefinition.textContent = value.definition;
+        const jokeExample = document.querySelector("#example");
+        jokeExample.textContent = value.example;
+        modal.showModal();
+    }
+    //make one for each level, silver, bronze 
+    const goldLink = document.querySelector('#gold');
+    goldLink.addEventListener("click", () => {
+        showModal(membershipDetails[0]);
+    })
+    //This might not be reight or nessisary
+    aLink.addEventListener("click", () => {
+        const jokeType = document.querySelector("#typeOfClass");
+        jokeType.textContent = value.type;
+        const jokeDefinition = document.querySelector("#definition");
+        jokeDefinition.textContent = value.definition;
+        const jokeExample = document.querySelector("#example");
+        jokeExample.textContent = value.example;
+        modal.showModal();
+    })
+
+

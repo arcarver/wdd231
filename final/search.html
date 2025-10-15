@@ -26,9 +26,9 @@
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/search-jokes.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
 
-    <!-- <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script> -->
+    <!-- <script src="scripts/spotlight.js" defer></script> -->
 </head>
 
 <body>
@@ -53,19 +53,22 @@
         <form method="GET" action="results.html" class="searchResults">
             <h2>What is your favorite type of joke?</h2>
             <section class="radio">
-                <label><input type="radio" name="type" value="Knock Knock Jokes" checked> Knock Knock Jokes</label>
-                <label><input type="radio" name="type" value="Puns"> Puns/Wordplay</label>
-                <label><input type="radio" name="type" value="Chicken Crossing Road Jokes"> Chicken Crossing Road
+                <label><input type="radio" name="type" id="knock" value="Knock Knock Jokes" checked> Knock Knock Jokes</label>
+                <label><input type="radio" name="type" id="pun" value="Puns"> Puns/Wordplay</label>
+                <label><input type="radio" name="type" id="chicken" value="Chicken Crossing Road Jokes"> Chicken Crossing Road
                     Jokes</label>
-                <label><input type="radio" name="type" value="Observational"> Observational</label>
-                <label><input type="radio" name="type" value="Anecdotal"> Anecdotal / Story Jokes</label>
-                <label><input type="radio" name="type" value="Dark Humor"> Dark Humor / Gallows Humor</label>
-                <label><input type="radio" name="type" value="One Liners"> One Liners</label>
-                <label><input type="radio" name="type" value="Sarcasm"> Sarcasm / Irony</label>
-                <label><input type="radio" name="type" value="Self-Deprecating"> Self-Deprecating</label>
-                <label><input type="radio" name="type" value="Slapstick"> Slapstick / Physical Comedy</label>
-                <label><input type="radio" name="type" value="Anti-Joke"> Anti-Joke</label>
-                <label><input type="radio" name="type" value="Deadpan"> Deadpan / Dry Humor</label>
+                <label><input type="radio" name="type" id="observe" value="Observational Humor"> Observational Humor</label>
+                <label><input type="radio" name="type" id="anecdotal" value="Anecdotal"> Anecdotal / Story Jokes</label>
+                <label><input type="radio" name="type" id="dark" value="Dark Humor"> Dark Humor / Gallows Humor</label>
+                <label><input type="radio" name="type" id="one" value="One-Liners"> One Liners</label>
+                <label><input type="radio" name="type" id="sarcasm" value="Sarcasm"> Sarcasm / Irony</label>
+                <label><input type="radio" name="type" id="self" value="Self-Deprecating Joke"> Self-Deprecating</label>
+                <label><input type="radio" name="type" id="slap" value="Slapstick"> Slapstick / Physical Comedy</label>
+                <label><input type="radio" name="type" id="anti" value="Anti-Joke"> Anti-Joke</label>
+                <label><input type="radio" name="type" id="dad" value="Dad Jokes"> Dad Jokes</label>
+                <label><input type="radio" name="type" id="parody" value="Parody"> Parody</label>
+                <label><input type="radio" name="type" id="political" value="Political Joke"> Political Joke</label>
+                <label><input type="radio" name="type" id="dead" value="Deadpan"> Deadpan / Dry Humor</label>
             </section>
             <h3>What is your favorite joke?</h3>
             <section class="term">
@@ -77,6 +80,14 @@
             </section>
         </form>
         <p id="searchJokes"></p>
+        <dialog id="jokeDetails">
+            <button class="close-button">❌</button>
+            <section id="typeOfJoke">
+                <h2 id="jokeName"></h2>
+                <p id="jokeDefinition"></p>
+                <p id="jokeExample"></p>
+            </section>
+        </dialog>
         <img src="images/banana.webp" alt="People in banana costumes">
     </main>
     <footer>

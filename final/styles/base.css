@@ -10,8 +10,7 @@
 
     font-family: var(--primary-font);
     background-color: var(--background);
-    color: var(--primary-font);
-    
+    color: var(--primary-font);   
 }
 header {
     display: flex;
@@ -52,7 +51,6 @@ span {
 nav {
     background-color: var(--secondary-font-color);
     color: var(--secondary-color)
-
 }
 
 nav.hidden {
@@ -207,13 +205,8 @@ footer{
         "what horse"
         "word horse"
         "joke horse"
-        "random horse";
-
-        
+        "random horse";        
     }
-    /* h2{
-        font-size:x-large;
-    } */
 }
 @media screen and (min-width: 54rem) {
     footer {
@@ -222,5 +215,5 @@ footer{
             max-width: 100%;
         }
     }
-        @media screen and (min-width: 64rem) {
-        }
+@media screen and (min-width: 64rem) {
+}
