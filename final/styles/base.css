@@ -274,7 +274,7 @@ footer{
     .what {
         grid-area: what;
     }
-    .words {
+    .word {
         grid-area: word;
 
     }
