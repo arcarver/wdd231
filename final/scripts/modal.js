@@ -1,5 +1,5 @@
-const jokeDefinitions = 
-    
+const jokeDefinitions =
+
     [
         {
             "type": "One-Liners",
@@ -65,9 +65,9 @@ const jokeDefinitions =
             "type": "Slapstick",
             "definition": "Comedy that relies on exaggerated physical actions, accidents, or clumsiness rather than words.",
             "example": "Someone slipping on a banana peel, falling down stairs, and landing in a pie — all on purpose for laughs."
-        }
+        },
         {
-            "type": "Chicken Crossing the Road Joke",
+            "type": "Chicken Crossing the Road Jokes",
             "definition": "A classic example of anti-humor that sets up the expectation of a punchline but delivers something unexpectedly literal or obvious.",
             "example": "Why did the chicken cross the road? To get to the other side."
         },
@@ -81,7 +81,7 @@ const jokeDefinitions =
             "definition": "A style of humor delivered in a dry, emotionless tone, often with absurd or ridiculous content.",
             "example": "I’m not saying your perfume is too strong. I’m just saying the canary was alive before you got here."
         }
-    ]
+    ];
 
 
 
@@ -93,42 +93,63 @@ const jokeDefinitions =
 //     const jsonData = await response.text();
 //     const definitions = JSON.parse(jsonData);
 
-    // <h2> Type of joke
-    // <p> definition
-    // <p> example
-    // #jokeDetails
-    // section #typeOfJoke
+// <h2> Type of joke
+// <p> definition
+// <p> example
+// #jokeDetails
+// section #typeOfJoke
 
-    const modal = document.querySelector("#jokeDetails");
-    const closeModal = document.querySelector(".close-button");
+const modal = document.querySelector("#jokeDetails");
+const closeModal = document.querySelector(".close-button");
 
-    closeModal.addEventListener("click", () => {
-        modal.close();
-    });
+closeModal.addEventListener("click", () => {
+    modal.close();
+});
 
-    function showModal(definitions) {
-        const jokeType = document.querySelector("#typeOfClass");
-        jokeType.textContent = value.type;
-        const jokeDefinition = document.querySelector("#definition");
-        jokeDefinition.textContent = value.definition;
-        const jokeExample = document.querySelector("#example");
-        jokeExample.textContent = value.example;
-        modal.showModal();
+function showModal(joke) {
+    const jokeType = document.querySelector("#jokeName");
+    jokeType.textContent = joke.type;
+    const jokeDefinition = document.querySelector("#jokeDefinition");
+    jokeDefinition.textContent = joke.definition;
+    const jokeExample = document.querySelector("#jokeExample");
+    jokeExample.textContent = joke.example;
+    modal.showModal();
+}
+//make one for each level, silver, bronze
+// const goldLink = document.querySelector('#gold');
+// goldLink.addEventListener("click", () => {
+//     showModal(membershipDetails[0]);
+// })
+
+function getJokeForRadioButton(value) {
+    for (i = 0; i < jokeDefinitions.length; ++i) {
+        if (jokeDefinitions[i].type == value) {
+            return jokeDefinitions[i];
+        }
     }
-    //make one for each level, silver, bronze 
-    const goldLink = document.querySelector('#gold');
-    goldLink.addEventListener("click", () => {
-        showModal(membershipDetails[0]);
-    })
-    //This might not be reight or nessisary
-    aLink.addEventListener("click", () => {
-        const jokeType = document.querySelector("#typeOfClass");
-        jokeType.textContent = value.type;
-        const jokeDefinition = document.querySelector("#definition");
-        jokeDefinition.textContent = value.definition;
-        const jokeExample = document.querySelector("#example");
-        jokeExample.textContent = value.example;
-        modal.showModal();
-    })
+
+    return undefined;
+}
+
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+radioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', (event) => {
+        const joke = getJokeForRadioButton(event.target.value);
+        if (joke) {
+            showModal(joke);
+        }
+    });
+});
+
+//This might not be reight or nessisary
+// aLink.addEventListener("click", () => {
+//     const jokeType = document.querySelector("#typeOfClass");
+//     jokeType.textContent = value.type;
+//     const jokeDefinition = document.querySelector("#definition");
+//     jokeDefinition.textContent = value.definition;
+//     const jokeExample = document.querySelector("#example");
+//     jokeExample.textContent = value.example;
+//     modal.showModal();
+// })
 
 
