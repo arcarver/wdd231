@@ -245,7 +245,9 @@ footer{
 .dad, .what, .joke, .horse, .word {
     padding-bottom: 1px;
 }
-
+.word {
+    padding-top: 1px;
+}
 @media screen and (min-width: 38rem) {
     .hamburger {
         display: none;
