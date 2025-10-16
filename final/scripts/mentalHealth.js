@@ -13,6 +13,7 @@ async function setupMentalHealth() {
     */
     providers.providers.forEach(provider => {
         const sectionElement = document.createElement('section');
+        sectionElement.className = 'mental';
         cardSection.appendChild(sectionElement);
 
         const nameElement = document.createElement('h3');
@@ -29,6 +30,7 @@ async function setupMentalHealth() {
 
         const costElement = document.createElement('h4');
         costElement.textContent = provider.cost;
+        costElement.className = 'cost';
         sectionElement.appendChild(costElement);
     });
 }
