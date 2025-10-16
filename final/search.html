@@ -45,7 +45,7 @@
             </ul>
         </nav>
         <h1>Search</h1>
-        <p>What type of jokes do you like? Do you like jokes about bison or bananas? How about monkeys?</p>
+        <p class="emphasis">What type of jokes do you like? Do you like jokes about bison or bananas? How about monkeys?</p>
         <form method="GET" action="results.html" class="searchResults">
             <h2>What is your favorite type of joke?</h2>
             <section class="radio">
@@ -70,12 +70,12 @@
                 <label><input type="radio" name="type" id="political" value="Political Joke"> Political Joke</label>
                 <label><input type="radio" name="type" id="dead" value="Deadpan Joke"> Deadpan / Dry Humor</label>
             </section>
-            <h3>What is your favorite joke?</h3>
+            <h3 class="emphasis">What is your favorite joke?</h3>
             <section class="term">
-                <label id="yourJoke">Write your joke here: <textarea title="description"
+                <label id="yourJoke" class="top">Write your joke here: <textarea title="description"
                         name="description"></textarea></label>
                 <!-- <input type="hidden" name="timestamp" id="timestamp"> -->
-                <label>Joke Search Term <input id="searchTerm" type="text" name="searchTerm"
+                <label class="top">Joke Search Term <input id="searchTerm" type="text" name="searchTerm"
                         title="Search Term"></label>
                 <button type="submit" name="submit" id="submit">Search for Jokes</button>
             </section>

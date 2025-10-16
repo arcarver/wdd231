@@ -121,11 +121,31 @@ h2{
     padding: 7px 15px ;
     margin-left: 15px;
 }
+.emphasis {
+    background-color: var(--secondary-font-color);
+    color: var(--background);
+    padding: 15px;
+    border: 4px dotted var(--secondary-color);
+}
 form {
     display: grid;
     max-width: 356px;
     border: 4px solid var(--primary-font-color);
     border-radius: 8px;
+    padding-bottom: 5px;
+}
+.term {
+    display: unset;
+}
+.top {
+    flex-direction: column;
+}
+
+#submit{
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--secondary-color);
+    /* color: var(--background); */
 }
 .radio {
     display: grid;
