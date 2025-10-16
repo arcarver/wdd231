@@ -170,6 +170,9 @@ h3 {
     display: grid;
     
 }
+.bananaimg {
+    width: 100%;
+}
 footer{
     display: flex;
 }

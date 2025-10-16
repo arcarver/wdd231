@@ -24,10 +24,11 @@
         href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Edu+QLD+Beginner:wght@600&family=Montserrat&display=swap"
         rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/navigation.js" defer></script> 
+    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/modal.js" defer></script>
 
 </head>
+
 <body>
     <header>
         <img src="images/leaves.svg" alt="icon of leaves" width="25" height="25">
@@ -45,7 +46,8 @@
             </ul>
         </nav>
         <h1>Search</h1>
-        <p class="emphasis">What type of jokes do you like? Do you like jokes about bison or bananas? How about monkeys?</p>
+        <p class="emphasis">What type of jokes do you like? Do you like jokes about bison or bananas? How about monkeys?
+        </p>
         <form method="GET" action="results.html" class="searchResults">
             <h2>What is your favorite type of joke?</h2>
             <section class="radio">
@@ -72,11 +74,12 @@
             </section>
             <h3 class="emphasis">What is your favorite joke?</h3>
             <section class="term">
-                <label id="yourJoke" class="top">Write your joke here: <textarea title="description"
-                        name="description"></textarea></label>
+                <label id="yourJoke" class="top" id="yourJokeLabel">Write your joke here:</label>
+                <textarea title="description" name="description" aria-labelledby="yourJokeLabel"></textarea>
                 <!-- <input type="hidden" name="timestamp" id="timestamp"> -->
-                <label class="top">Joke Search Term <input id="searchTerm" type="text" name="searchTerm"
-                        title="Search Term"></label>
+                <label class="top" id="jokeSearchLabel">Joke Search Term</label>
+                <input id="searchTerm" type="text" name="searchTerm" title="Search Term"
+                    aria-labelledby="jokeSearchLabel">
                 <button type="submit" name="submit" id="submit">Search for Jokes</button>
             </section>
         </form>
@@ -89,7 +92,7 @@
                 <p id="jokeExample"></p>
             </section>
         </dialog>
-        <img src="images/banana.webp" alt="People in banana costumes">
+        <img class="bananaimg" src="images/banana.webp" alt="People in banana costumes">
     </main>
     <footer>
         <section>
