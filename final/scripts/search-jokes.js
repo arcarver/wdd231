@@ -15,7 +15,7 @@ async function fetchJokes(term) {
         // console.log(data.joke);
         searchJoke.textContent = data.results[0].joke;
     } catch (error) {
-        console.error('Error fetching joke:', error);
+        // console.error('Error fetching joke:', error);
     }
 }
 

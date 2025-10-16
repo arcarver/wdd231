@@ -17,7 +17,7 @@ async function fetchJoke() {
         // console.log(data.joke);
         randomJoke.textContent = data.joke;
     } catch (error) {
-        console.error('Error fetching joke:', error);
+        // console.error('Error fetching joke:', error);
     }
 }
 async function newJoke() {
