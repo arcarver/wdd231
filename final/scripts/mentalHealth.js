@@ -33,3 +33,27 @@ async function setupMentalHealth() {
     });
 }
 setupMentalHealth();
+
+//counts numbers of visits
+const showVisits = document.querySelector(".visits");
+
+let lastVisit = Number(window.localStorage.getItem("lastVisit")) || 0;
+// lastVisit = 0;
+const currentDate = Date.now();
+
+if (lastVisit == 0) {
+    showVisits.innerHTML = "Welcome! Let us know if you have any questions."
+} else {
+    let lastVisitDate = new Date(lastVisit);
+    // lastVisitDate = new Date(lastVisitDate.setHours(lastVisitDate.getHours() - 25));
+    const timeDifferenceInMilliseconds = currentDate - lastVisitDate;
+    const differenceInDays = Math.floor(timeDifferenceInMilliseconds / (1000 * 60 * 60 * 24));
+    if (differenceInDays < 1) {
+        showVisits.innerHTML = 'Back so soon! Awesome!'
+    } else if (differenceInDays == 1) {
+        showVisits.innerHTML = `You last visited ${differenceInDays} day ago`;
+    } else {
+        showVisits.innerHTML = `You last visited ${differenceInDays} days ago`;
+    }
+}
+localStorage.setItem("lastVisit", currentDate); 

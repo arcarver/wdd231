@@ -37,4 +37,6 @@ if (myJokes.get('description') != "") {
     document.querySelector("#searchResults").innerHTML += `<p>Here the joke you shared: ${myJokes.get('description')}</p>`;
 }
 
+
+
 fetchJokes(term);
