@@ -11,7 +11,7 @@ async function displayResults(data) {
         console.error("failed to fetch weather data");
     } else {
         const weatherData = await response.json();
-        console.log('JSON data:', data);
+        // console.log('JSON data:', data);
         // At the minimum, include:
         // the current temperature,
         // the current weather description, and

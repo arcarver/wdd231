@@ -238,8 +238,14 @@ footer{
     background-color: var(--primary-font-color);
     color: var(--background);
     border-top: 3px solid var(--primary-color);
-    
 }
+.hiddenham {
+    color: var(--primary-font-color);
+}
+.dad, .what, .joke, .horse, .word {
+    padding-bottom: 1px;
+}
+
 @media screen and (min-width: 38rem) {
     .hamburger {
         display: none;
@@ -274,7 +280,7 @@ footer{
     }
     .joke h2{
         grid-area: joke;
-        border: 3px, dashed, var(--primary-color);
+        border: 3px, dashed var(--primary-color);
         padding: 5px;
     }
     #randomJoke

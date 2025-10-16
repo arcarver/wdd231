@@ -11,8 +11,8 @@ async function fetchJokes(term) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data);
-        console.log(data.joke);
+        // console.log(data);
+        // console.log(data.joke);
         searchJoke.textContent = data.results[0].joke;
     } catch (error) {
         console.error('Error fetching joke:', error);
@@ -20,9 +20,9 @@ async function fetchJokes(term) {
 }
 
 const myJokes = new URLSearchParams(window.location.search);
-console.log(myJokes);
+// console.log(myJokes);
 
-console.log(myJokes.get("type"));
+// console.log(myJokes.get("type"));
 
 const term = myJokes.get("searchTerm");
 let termOrAnything = term;
