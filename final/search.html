@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
 
-  
+
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/modal.js" defer></script>
+    <script src="scripts/modal.js" type="module" defer></script>
 
 </head>
 
@@ -43,58 +43,61 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li class="current"><a href="search.html">Search</a></li>
-                
+
             </ul>
         </nav>
         <h1>Search</h1>
         <p class="emphasis">What type of jokes do you like? Do you like jokes about bison or bananas? How about monkeys?
         </p>
         <section class="search">
-        <form method="GET" action="results.html" class="searchResults">
-            <h2>What is your favorite type of joke?</h2>
-            <section class="radio">
-                <label><input type="radio" name="type" id="knock" value="Knock-Knock Jokes" checked> Knock Knock
-                    Jokes</label>
-                <label><input type="radio" name="type" id="pun" value="Puns"> Puns/Wordplay</label>
-                <label><input type="radio" name="type" id="chicken" value="Chicken Crossing the Road Jokes"> Chicken
-                    Crossing Road
-                    Jokes</label>
-                <label><input type="radio" name="type" id="observe" value="Observational Humor"> Observational
-                    Humor</label>
-                <label><input type="radio" name="type" id="anecdotal" value="Anecdotal Joke"> Anecdotal / Story
-                    Jokes</label>
-                <label><input type="radio" name="type" id="dark" value="Dark Humor"> Dark Humor / Gallows Humor</label>
-                <label><input type="radio" name="type" id="one" value="One-Liners"> One Liners</label>
-                <label><input type="radio" name="type" id="sarcasm" value="Sarcasm"> Sarcasm / Irony</label>
-                <label><input type="radio" name="type" id="self" value="Self-Deprecating Joke"> Self-Deprecating</label>
-                <label><input type="radio" name="type" id="slap" value="Slapstick"> Slapstick / Physical Comedy</label>
-                <label><input type="radio" name="type" id="anti" value="Anti-Joke"> Anti-Joke</label>
-                <label><input type="radio" name="type" id="dad" value="Dad Jokes"> Dad Jokes</label>
-                <label><input type="radio" name="type" id="parody" value="Parody"> Parody</label>
-                <label><input type="radio" name="type" id="political" value="Political Joke"> Political Joke</label>
-                <label><input type="radio" name="type" id="dead" value="Deadpan Joke"> Deadpan / Dry Humor</label>
-            </section>
-            <h3 class="emphasis">What is your favorite joke?</h3>
-            <section class="term">
-                <label id="yourJoke" class="top" id="yourJokeLabel">Write your joke here:</label>
-                <textarea title="description" name="description" aria-labelledby="yourJokeLabel"></textarea>
-                <!-- <input type="hidden" name="timestamp" id="timestamp"> -->
-                <label class="top" id="jokeSearchLabel">Joke Search Term</label>
-                <input id="searchTerm" type="text" name="searchTerm" title="Search Term"
-                    aria-labelledby="jokeSearchLabel">
-                <button type="submit" name="submit" id="submit">Search for Jokes</button>
-            </section>
-        </form>
-        <p id="searchJokes"></p>
-        <dialog id="jokeDetails">
-            <button class="close-button">❌</button>
-            <section id="typeOfJoke">
-                <h2 id="jokeName"></h2>
-                <p id="jokeDefinition"></p>
-                <p id="jokeExample"></p>
-            </section>
-        </dialog>
-        <img class="bananaImg" src="images/banana.webp" alt="People in banana costumes" loading="lazy">
+            <form method="GET" action="results.html" class="searchResults">
+                <h2>What is your favorite type of joke?</h2>
+                <section class="radio">
+                    <label><input type="radio" name="type" id="knock" value="Knock-Knock Jokes" checked> Knock Knock
+                        Jokes</label>
+                    <label><input type="radio" name="type" id="pun" value="Puns"> Puns/Wordplay</label>
+                    <label><input type="radio" name="type" id="chicken" value="Chicken Crossing the Road Jokes"> Chicken
+                        Crossing Road
+                        Jokes</label>
+                    <label><input type="radio" name="type" id="observe" value="Observational Humor"> Observational
+                        Humor</label>
+                    <label><input type="radio" name="type" id="anecdotal" value="Anecdotal Joke"> Anecdotal / Story
+                        Jokes</label>
+                    <label><input type="radio" name="type" id="dark" value="Dark Humor"> Dark Humor / Gallows
+                        Humor</label>
+                    <label><input type="radio" name="type" id="one" value="One-Liners"> One Liners</label>
+                    <label><input type="radio" name="type" id="sarcasm" value="Sarcasm"> Sarcasm / Irony</label>
+                    <label><input type="radio" name="type" id="self" value="Self-Deprecating Joke">
+                        Self-Deprecating</label>
+                    <label><input type="radio" name="type" id="slap" value="Slapstick"> Slapstick / Physical
+                        Comedy</label>
+                    <label><input type="radio" name="type" id="anti" value="Anti-Joke"> Anti-Joke</label>
+                    <label><input type="radio" name="type" id="dad" value="Dad Jokes"> Dad Jokes</label>
+                    <label><input type="radio" name="type" id="parody" value="Parody"> Parody</label>
+                    <label><input type="radio" name="type" id="political" value="Political Joke"> Political Joke</label>
+                    <label><input type="radio" name="type" id="dead" value="Deadpan Joke"> Deadpan / Dry Humor</label>
+                </section>
+                <h3 class="emphasis">What is your favorite joke?</h3>
+                <section class="term">
+                    <label id="yourJoke" class="top" id="yourJokeLabel">Write your joke here:</label>
+                    <textarea title="description" name="description" aria-labelledby="yourJokeLabel"></textarea>
+                    <!-- <input type="hidden" name="timestamp" id="timestamp"> -->
+                    <label class="top" id="jokeSearchLabel">Joke Search Term</label>
+                    <input id="searchTerm" type="text" name="searchTerm" title="Search Term"
+                        aria-labelledby="jokeSearchLabel">
+                    <button type="submit" name="submit" id="submit">Search for Jokes</button>
+                </section>
+            </form>
+            <p id="searchJokes"></p>
+            <dialog id="jokeDetails">
+                <button class="close-button">❌</button>
+                <section id="typeOfJoke">
+                    <h2 id="jokeName"></h2>
+                    <p id="jokeDefinition"></p>
+                    <p id="jokeExample"></p>
+                </section>
+            </dialog>
+            <img class="bananaImg" src="images/banana.webp" alt="People in banana costumes" loading="lazy">
         </section>
     </main>
     <footer>

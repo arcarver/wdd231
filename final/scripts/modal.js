@@ -1,92 +1,4 @@
-const jokeDefinitions =
-
-    [
-        {
-            "type": "One-Liners",
-            "definition": "A very short joke delivered in a single sentence, often with a witty or surprising punchline.",
-            "example": "I told my computer I needed a break, and now it won’t stop sending me vacation ads."
-        },
-        {
-            "type": "Dad Jokes",
-            "definition": "A wholesome, simple pun or play on words, often associated with 'dads' for their cheesy or predictable humor.",
-            "example": "What do you call fake spaghetti? An impasta."
-        },
-        {
-            "type": "Puns",
-            "definition": "A joke that exploits multiple meanings of a word or words that sound alike for a humorous effect.",
-            "example": "I used to be a baker, but I couldn’t make enough dough."
-        },
-        {
-            "type": "Knock-Knock Jokes",
-            "definition": "A call-and-response joke typically involving a pun in the punchline.",
-            "example": "Knock knock. Who’s there? Atch. Atch who? Bless you!"
-        },
-        {
-            "type": "Dark Humor",
-            "definition": "Humor that finds comedy in serious, grim, or taboo subjects. Often controversial or sensitive.",
-            "example": "I have a stepladder because my real ladder left when I was a kid."
-        },
-        {
-            "type": "Kids’ Joke",
-            "definition": "Simple and clean humor that's easy for children to understand and enjoy.",
-            "example": "Why did the teddy bear say no to dessert? Because it was stuffed!"
-        },
-        {
-            "type": "Anti-Joke",
-            "definition": "A joke that intentionally lacks a punchline or delivers an unexpected, literal response instead of humor.",
-            "example": "What’s green and has wheels? Grass. I lied about the wheels."
-        },
-        {
-            "type": "Political Joke",
-            "definition": "Humor that pokes fun at politicians, policies, or political systems, often satirical.",
-            "example": "If voting made a difference, they wouldn’t let us do it."
-        },
-        {
-            "type": "Observational Humor",
-            "definition": "Jokes based on the quirky, relatable aspects of everyday life.",
-            "example": "Why do we press harder on the remote when the batteries are dying?"
-        },
-        {
-            "type": "Self-Deprecating Joke",
-            "definition": "Humor where someone makes fun of themselves in a light-hearted way.",
-            "example": "I’m not lazy. I’m just on energy-saving mode."
-        },
-        {
-            "type": "Sarcasm",
-            "definition": "A form of verbal irony where what’s said is the opposite of what’s meant, often mocking.",
-            "example": "Oh great, another Monday — just what I needed."
-        },
-        {
-            "type": "Parody",
-            "definition": "A humorous imitation of a person, genre, or work, exaggerated for comic effect.",
-            "example": "A skit that mimics a superhero movie trailer but the hero is 'Laundry Man' who only washes socks."
-        },
-        {
-            "type": "Slapstick",
-            "definition": "Comedy that relies on exaggerated physical actions, accidents, or clumsiness rather than words.",
-            "example": "Someone slipping on a banana peel, falling down stairs, and landing in a pie — all on purpose for laughs."
-        },
-        {
-            "type": "Chicken Crossing the Road Jokes",
-            "definition": "A classic example of anti-humor that sets up the expectation of a punchline but delivers something unexpectedly literal or obvious.",
-            "example": "Why did the chicken cross the road? To get to the other side."
-        },
-        {
-            "type": "Anecdotal Joke",
-            "definition": "A short, humorous story based on a real or fictional personal experience, often ending with a punchline or twist.",
-            "example": "I once tried to do a juice cleanse. I made it three hours before deciding pizza counts as a fruit if it has tomato sauce."
-        },
-        {
-            "type": "Deadpan Joke",
-            "definition": "A style of humor delivered in a dry, emotionless tone, often with absurd or ridiculous content.",
-            "example": "I’m not saying your perfume is too strong. I’m just saying the canary was alive before you got here."
-        }
-    ];
-
-
-
-
-
+import { jokeDefinitions } from "./jokeModule.js";
 
 // async function jokeModal() {
 //     const response = await fetch("data/definitions.json");
@@ -122,7 +34,7 @@ function showModal(joke) {
 // })
 
 function getJokeForRadioButton(value) {
-    for (i = 0; i < jokeDefinitions.length; ++i) {
+    for (let i = 0; i < jokeDefinitions.length; ++i) {
         if (jokeDefinitions[i].type == value) {
             return jokeDefinitions[i];
         }
