@@ -42,7 +42,7 @@ let lastVisit = Number(window.localStorage.getItem("lastVisit")) || 0;
 const currentDate = Date.now();
 
 if (lastVisit == 0) {
-    showVisits.innerHTML = "Welcome! Let us know if you have any questions."
+    showVisits.innerHTML = "Welcome! Laugh. Cry. Let us know if you have any questions."
 } else {
     let lastVisitDate = new Date(lastVisit);
     // lastVisitDate = new Date(lastVisitDate.setHours(lastVisitDate.getHours() - 25));

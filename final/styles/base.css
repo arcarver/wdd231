@@ -124,6 +124,8 @@ h2{
 form {
     display: grid;
     max-width: 356px;
+    border: 4px solid var(--primary-font-color);
+    border-radius: 8px;
 }
 .radio {
     display: grid;
